@@ -1,38 +1,48 @@
+# === Maven ===
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+**/src/main/**/target/
+**/src/test/**/target/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+# === IntelliJ IDEA ===
+.idea/
+.idea/*
+!.idea/inspectionProfiles
 *.iws
 *.iml
 *.ipr
 
-### Eclipse ###
+# === VS Code ===
+.vscode/
+
+# === Logs ===
+*.log
+
+# === OS-specific files ===
+.DS_Store
+Thumbs.db
+
+# === Eclipse (ако някога го ползваш) ===
 .apt_generated
 .classpath
 .factorypath
 .project
 .settings
 .springBeans
-.sts4-cache
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# === Java compiled files ===
+*.class
+
+# === Environment ===
+.env
+*.env
+
+# === Build tools ===
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# === Test output ===
+test-output/
+surefire-reports/
 
-### Mac OS ###
-.DS_Store
+# === Reports ===
+src/test/resources/reports/
