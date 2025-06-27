@@ -2,19 +2,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.iap</groupId>
-  <artifactId>AT18_TAF</artifactId>
+  <groupId>org.vapostolova</groupId>
+  <artifactId>final-project-taf</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>S25_TNG7_TA</name>
-  <url>http://maven.apache.org</url>
+  <name>Final Automation Project Veneta</name>
+  <url>https://github.com/VenetaApostolova/VA_TAF_S4_THG10.git</url>
 
   <developers>
     <developer>
-      <id>NN8879</id>
-      <name>Nikolay Nikolov Nikolov</name>
-      <email>nikolay.nikolov.qa@test.world</email>
+      <id>veneta.qa</id>
+      <name>Veneta Koseva Apostolova</name>
+      <email>ven.company@gmail.com</email>
     </developer>
   </developers>
 

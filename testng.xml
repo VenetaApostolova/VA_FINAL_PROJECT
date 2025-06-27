@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Final Test Suite">
+        <classes>
+            <class name="org.va.demos.DownloadTest">
+                <methods>
+                    <include name="DwTest"/>
+                </methods>
+            </class>
+
+            <class name="org.va.login.LoginHappyPathTests">
+                <methods>
+                    <include name="verifyTheUserCannotLoginWithInvalidCredentials"/>
+                    <include name="verifyLoginPageLayout"/>
+                </methods>
+            </class>
+
+            <class name="org.va.post.PostTests">
+                <methods>
+                    <include name="verifyUserCanCreatePost"/>
+                    <include name="verifyUserCanLikePost"/>
+                    <include name="verifyUserCanDislikePost"/>
+                    <include name="verifyUserCanDeletePost"/>
+                </methods>
+            </class>
+
+            <class name="org.va.profile.ProfileTests">
+                <methods>
+                    <include name="updateProfileInfo"/>
+                </methods>
+            </class>
+
+            <class name="org.va.reg.RegistrationHappyPathsTests">
+                <methods>
+                    <include name="verifyUserCanRegisterWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

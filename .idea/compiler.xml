@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AT18_TAF" />
+        <module name="final-project-taf" />
       </profile>
     </annotationProcessing>
   </component>
