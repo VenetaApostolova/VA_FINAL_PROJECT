@@ -8,14 +8,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 
 public abstract class BasePage {
 
     public static final String BASE_URL = "http://training.skillo-bg.com:4300";
 
-    WebDriver driver;
-    WebDriverWait wait;
-    Logger log;
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Logger log;
 
     public BasePage(WebDriver driver, Logger log){
         this.driver = driver;
@@ -23,91 +24,106 @@ public abstract class BasePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(7));
     }
 
-    public void navigateTo(String pageURLSUFIX) {
-        String urlToBeLoaded = BASE_URL+pageURLSUFIX;
+    public void navigateTo(String pageURLSUFFIX) {
+        String urlToBeLoaded = BASE_URL + pageURLSUFFIX;
         driver.get(urlToBeLoaded);
-        log.info("# CONFIRM: The user has naivated to "+ urlToBeLoaded);
+        log.info("# CONFIRM: The user has navigated to " + urlToBeLoaded);
     }
 
     public void clickOn(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
-        log.info("The user has clicked on " + element);
+        log.info("The user has clicked on " + locatorInfo(element));
     }
 
-     public void typeTextIn(WebElement elm, String txt){
+    public void typeTextIn(WebElement elm, String txt){
         wait.until(ExpectedConditions.visibilityOf(elm));
         elm.clear();
         elm.sendKeys(txt);
-        log.info("# CONFIRM: The user has provided in" + elm + " the text "+txt);
-
-        //JS excectuer - DOM completed function that will give us info if the page JS is ready
-        // waitPageToBeFullyLoaded();
+        log.info("# CONFIRM: The user has provided in " + locatorInfo(elm) + " the text: " + txt);
     }
 
-    //Support methods for interacting with ELM text and attributes
-    //TEXT Interactions
     public String getElementText(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
         String elementText = element.getText();
-
-        log.info("# CONFIRM THE WEB ELEMENT TEXT IS " + elementText);
+        log.info("# CONFIRM: The text is: " + elementText);
         return elementText;
     }
 
     public String getElementAttributeValue(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
-        String elementText = element.getAttribute("value");
-
-        log.info("# CONFIRM THE WEB ELEMENT ATTRIBUTE VALUE IS " + elementText);
-        return elementText;
+        String attribute = element.getAttribute("value");
+        log.info("# CONFIRM: Attribute 'value' is: " + attribute);
+        return attribute;
     }
 
     public String getElementPlaceholderValue(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
-        String elementText = element.getAttribute("placeholder");
-
-        log.info("# CONFIRM THE WEB ELEMENT PLACEHOLDER VALUE IS " + elementText);
-        return elementText;
+        String placeholder = element.getAttribute("placeholder");
+        log.info("# CONFIRM: Placeholder is: " + placeholder);
+        return placeholder;
     }
 
-    // VERIFICATIONS BOOLEANS
     public boolean isElementPresented(WebElement element){
-        boolean isWebElementShown = false;
-        String locatorInfo = locatorInfo(element);
-
-        log.info("@ ACTION The user is verifying if web element is shown with locator: info " + locatorInfo);
+        boolean isShown = false;
+        String locator = locatorInfo(element);
+        log.info("@ ACTION: Checking visibility of element: " + locator);
         try {
             wait.until(ExpectedConditions.visibilityOf(element));
-            isWebElementShown = true;
-            log.info("# CONFIRM The web element is shown with info: "+ locatorInfo);
-        } catch (TimeoutException e) {
-           log.error("* ERROR NOT SHOWN Web element with "+locatorInfo);
+            isShown = true;
+            log.info("# CONFIRM: The element is visible: " + locator);
+        } catch (TimeoutException | NoSuchElementException e) {
+            log.error("* ERROR: Element not visible: " + locator);
         }
-        return isWebElementShown;
+        return isShown;
     }
 
     public boolean isElementClickable(WebElement element){
-        boolean isElementClickable = false;
-        String locatorInfo = locatorInfo(element);
-        log.info("@ ACTION The user is verifying if web element is shown with locator: info ", locatorInfo);
+        boolean isClickable = false;
+        String locator = locatorInfo(element);
+        log.info("@ ACTION: Checking if element is clickable: " + locator);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(element));
-            isElementClickable = true;
-            log.info("# CONFIRM The web element is shown with info: "+ locatorInfo);
+            isClickable = true;
+            log.info("# CONFIRM: The element is clickable: " + locator);
         } catch (TimeoutException e) {
-            log.error("! ERROR NOT CLICKABLE Web element with "+locatorInfo);
+            log.error("! ERROR: Element not clickable: " + locator);
         }
-        return isElementClickable;
+        return isClickable;
     }
 
-    private String locatorInfo(WebElement elm ){
-        String[] rawWebElmInfo = elm.toString().split("->");
-        String[] webElmInfo = rawWebElmInfo[1].split(":");
-        String locatorStrategy = webElmInfo[0];
-        String locatorExpression = webElmInfo[1];
-        String info = "LOCATOR STRATEGY BY : "+ locatorStrategy.toUpperCase() + " WITH LOCATOR EXPRESSION"+ locatorExpression;
-        return info;
+    public boolean isTextPresentInElement(WebElement element, String expectedText) {
+        try {
+            wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
+            log.info("# CONFIRM: Text '" + expectedText + "' is present in element: " + locatorInfo(element));
+            return true;
+        } catch (TimeoutException e) {
+            log.error("* ERROR: Text not present in element: " + expectedText);
+            return false;
+        }
+    }
+
+    public void pause(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+            log.info("Paused for " + seconds + " seconds.");
+        } catch (InterruptedException e) {
+            log.error("Interrupted during pause.");
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    private String locatorInfo(WebElement elm){
+        try {
+            String[] rawInfo = elm.toString().split("->");
+            if (rawInfo.length < 2) return elm.toString();
+            String[] locatorParts = rawInfo[1].split(":");
+            String strategy = locatorParts[0].trim();
+            String value = locatorParts[1].replace("]", "").trim();
+            return "LOCATOR STRATEGY: " + strategy.toUpperCase() + " | VALUE: " + value;
+        } catch (Exception e) {
+            return "Unable to parse element info.";
+        }
     }
 }
