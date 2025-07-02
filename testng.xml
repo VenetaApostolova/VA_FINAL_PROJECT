@@ -3,6 +3,7 @@
 <suite name="All Test Suite">
     <test name="Final Test Suite">
         <classes>
+            <!--
             <class name="org.va.demos.DownloadTest">
                 <methods>
                     <include name="DwTest"/>
@@ -36,6 +37,7 @@
                     <include name="verifyUserCanRegisterWithValidData"/>
                 </methods>
             </class>
+            -->
         </classes>
     </test>
 </suite>

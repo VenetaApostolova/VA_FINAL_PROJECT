@@ -47,3 +47,5 @@ surefire-reports/
 
 # === Reports ===
 src/test/resources/reports/
+# === Backup folder (excluded on purpose) ===
+old_code_backup/
