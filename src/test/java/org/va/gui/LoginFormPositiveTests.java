@@ -9,9 +9,8 @@ import org.va.POM.LoginPage;
 import org.va.base.BaseTest;
 
 import java.time.Duration;
-import java.time.Instant;
 
-public class LoginPositiveTests extends BaseTest {
+public class LoginFormPositiveTests extends BaseTest {
 
     private static final String LOGIN_SUCCESSFUL_MSG = "Successful login!";
 
@@ -101,5 +100,4 @@ public class LoginPositiveTests extends BaseTest {
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.endsWith("/posts/all"), "Expected to be on Home (/posts/all), but was: " + currentUrl);
     }
-
 }

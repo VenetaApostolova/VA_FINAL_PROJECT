@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.va.POM.LoginPage;
 import org.va.base.BaseTest;
+import org.va.POM.LoginPage;
 
 public class LoginPageLayoutTests extends BaseTest {
 
@@ -56,10 +57,8 @@ public class LoginPageLayoutTests extends BaseTest {
                 "Password placeholder text is incorrect"
         );
 
-        log.info("STEP 5: Verify Login button label");
         Assert.assertEquals(
-                loginPage.getLoginFormSubmitButtonlabel(),
-                "Sign in",
+                loginPage.getLoginFormSubmitButtonLabel(),
                 "Login button label is incorrect"
         );
     }
