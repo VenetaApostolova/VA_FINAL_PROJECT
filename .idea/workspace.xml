@@ -4,27 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="git status">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BrowserDriverFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostModal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/demos/DownloadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/homePage/HomePageTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/login/LoginHappyPathTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/post/PostTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/profile/ProfileTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/reg/RegistrationHappyPathsTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/upload/testUpload.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/upload/testUpload.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginNegativeTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginPageLayoutTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginPositiveTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/screenshots/confirmLoginPageLogoIsVisible.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/testRegistrationWithMismatchedPasswords.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/testRegisterWithValidDataAndLongPublicInfo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/testRegistrationWithLongUsername.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/testRegistrationWithMinUsernameLength.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/testRegistrationWithSpecialCharactersInPublicInfo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/testValidRegistrationWithUniqueData.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +71,13 @@
     "TestNG.LoginHappyPathTests.executor": "Run",
     "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials (1).executor": "Run",
     "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials.executor": "Run",
+    "TestNG.LoginLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly.executor": "Run",
+    "TestNG.LoginLayoutTests.executor": "Run",
+    "TestNG.LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed.executor": "Run",
+    "TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible.executor": "Run",
+    "TestNG.LoginPositiveTests.executor": "Run",
+    "TestNG.LoginPositiveTests.loginSuccessfullyWithRememberMeOption.executor": "Run",
+    "TestNG.LoginPositiveTests.userIsRedirectedToHomeAfterLogin.executor": "Run",
     "TestNG.PostActionsAfterUploadTests.executor": "Run",
     "TestNG.PostActionsAfterUploadTests.testUserCanDeleteLastCreatedPost.executor": "Run",
     "TestNG.PostCreateTests.ensureUserCanCreatePost.executor": "Run",
@@ -98,6 +100,7 @@
     "TestNG.RegistrationNegativeTests.executor": "Run",
     "TestNG.RegistrationNegativeTests.testRegistrationWithEmptyEmailField.executor": "Run",
     "TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername.executor": "Run",
+    "TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords.executor": "Run",
     "TestNG.RegistrationPositiveTests (1).executor": "Run",
     "TestNG.RegistrationPositiveTests.executor": "Run",
     "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1).executor": "Run",
@@ -124,26 +127,8 @@
       <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords">
-    <configuration name="RegistrationNegativeTests.testRegistrationWithExistingUsername" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.registriation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.registriation" />
-      <option name="MAIN_CLASS_NAME" value="org.va.registriation.RegistrationNegativeTests" />
-      <option name="METHOD_NAME" value="testRegistrationWithExistingUsername" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationNegativeTests.testRegistrationWithMismatchedPasswords" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible">
+    <configuration name="LoginPageLayoutTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -152,25 +137,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.RegistrationNegativeTests" />
-      <option name="METHOD_NAME" value="testRegistrationWithMismatchedPasswords" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegistrationPositiveTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.registration.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.registration" />
-      <option name="MAIN_CLASS_NAME" value="org.va.registration.RegistrationPositiveTests" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginPageLayoutTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -178,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationPositiveTests.testValidRegistrationWithUniqueData (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -187,8 +154,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.RegistrationPositiveTests" />
-      <option name="METHOD_NAME" value="testValidRegistrationWithUniqueData" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginPageLayoutTests" />
+      <option name="METHOD_NAME" value="confirmLoginPageElementsAreDisplayed" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -196,17 +163,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationPositiveTests.testValidRegistrationWithUniqueData" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginPageLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.va.registration.*" />
+          <option name="PATTERN" value="org.va.gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.va.registration" />
-      <option name="MAIN_CLASS_NAME" value="org.va.registration.RegistrationPositiveTests" />
-      <option name="METHOD_NAME" value="testValidRegistrationWithUniqueData" />
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginPageLayoutTests" />
+      <option name="METHOD_NAME" value="confirmLoginPageLayoutIsVisibleCorrectly" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageLayoutTests.confirmLoginPageLogoIsVisible" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginPageLayoutTests" />
+      <option name="METHOD_NAME" value="confirmLoginPageLogoIsVisible" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPositiveTests.userIsRedirectedToHomeAfterLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginPositiveTests" />
+      <option name="METHOD_NAME" value="userIsRedirectedToHomeAfterLogin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -216,11 +219,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords" />
-        <item itemvalue="TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1)" />
-        <item itemvalue="TestNG.RegistrationPositiveTests (1)" />
-        <item itemvalue="TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData" />
-        <item itemvalue="TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername" />
+        <item itemvalue="TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible" />
+        <item itemvalue="TestNG.LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed" />
+        <item itemvalue="TestNG.LoginPageLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly" />
+        <item itemvalue="TestNG.LoginPageLayoutTests" />
+        <item itemvalue="TestNG.LoginPositiveTests.userIsRedirectedToHomeAfterLogin" />
       </list>
     </recent_temporary>
   </component>
@@ -281,7 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751028664423</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="project hotfix">
+      <option name="closed" value="true" />
+      <created>1751446148125</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751446148125</updated>
+    </task>
+    <task id="LOCAL-00008" summary="VA_FINAL_PROJECT base setup">
+      <option name="closed" value="true" />
+      <created>1751569016165</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751569016165</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +320,9 @@
     <MESSAGE value="Add .gitignore file to clean up tracked files" />
     <MESSAGE value="Ignore workspace.xml and remove it from version control" />
     <MESSAGE value="Update README.md with project introduction section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md with project introduction section" />
+    <MESSAGE value="project hotfix" />
+    <MESSAGE value="VA_FINAL_PROJECT base setup" />
+    <MESSAGE value="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility" />
   </component>
 </project>

@@ -43,6 +43,7 @@ public class RegistrationNegativeTests extends BaseTest {
         Assert.assertNotNull(errorMsg, "Expected error message for mismatched passwords, but none was shown.");
         Assert.assertTrue(errorMsg.toLowerCase().contains("парол"), "Expected error message to mention password mismatch.");
     }
+
     @Test
     public void testRegistrationWithEmptyEmailField() {
         log.info("STEP 1: Navigating to Home Page.");
@@ -78,6 +79,7 @@ public class RegistrationNegativeTests extends BaseTest {
         Assert.assertTrue(errorMsg.toLowerCase().contains("email") || errorMsg.toLowerCase().contains("имейл"),
                 "Expected error message to mention email problem.");
     }
+
     @Test
     public void testRegistrationWithExistingUsername() {
         log.info("STEP 1: Navigating to Home Page.");
