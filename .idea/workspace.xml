@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="git status">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BrowserDriverFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostModal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/demos/DownloadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/homePage/HomePageTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/login/LoginHappyPathTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/post/PostTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/profile/ProfileTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/reg/RegistrationHappyPathsTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/upload/testUpload.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/upload/testUpload.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VenetaApostolova&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VenetaApostolova/VA_FINAL_PROJECT.git&quot;,
+    &quot;accountId&quot;: &quot;f58a6920-5636-4fcd-a693-ac61601d4b3a&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2z3Nrwzt8RBoWUMf1omYbgLwtV9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/testng.xml.executor": "Run",
+    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_TAF_S4_THG10/testng.xml.executor": "Run",
+    "TestNG.LoginHappyPathTests.executor": "Run",
+    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials (1).executor": "Run",
+    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials.executor": "Run",
+    "TestNG.PostActionsAfterUploadTests.executor": "Run",
+    "TestNG.PostActionsAfterUploadTests.testUserCanDeleteLastCreatedPost.executor": "Run",
+    "TestNG.PostCreateTests.ensureUserCanCreatePost.executor": "Run",
+    "TestNG.PostCreateTests.executor": "Run",
+    "TestNG.PostCreateTests.testUserCanLikeLastCreatedPost.executor": "Run",
+    "TestNG.PostRandomImageTests.executor": "Run",
+    "TestNG.PostRandomImageTests.testUserCanCreatePostWithRandomImage.executor": "Run",
+    "TestNG.PostRandomImageTests.testUserCanSeeRandomImagePostInAllPostsPage.executor": "Run",
+    "TestNG.PostTests.confirmUserCanLikeOtherUsersPost.executor": "Run",
+    "TestNG.PostTests.confirmUserCanLikeOwnPost.executor": "Debug",
+    "TestNG.PostTests.ensureUserCanCreatePost.executor": "Run",
+    "TestNG.PostTests.executor": "Run",
+    "TestNG.PostTests.testUserCanCreatePostWithRandomImage.executor": "Run",
+    "TestNG.PostTests.testUserCanLikeOtherUsersPost.executor": "Run",
+    "TestNG.PostTests.testUserCanLikeTheirOwnPost.executor": "Run",
+    "TestNG.PostTests.verifyUserCanCreatePost.executor": "Run",
+    "TestNG.PostTests.verifyUserCanLikePost.executor": "Debug",
+    "TestNG.ProfileTests.executor": "Run",
+    "TestNG.RegistrationHappyPathsTests.verifyUserCanRegisterWithValidData.executor": "Run",
+    "TestNG.RegistrationNegativeTests.executor": "Run",
+    "TestNG.RegistrationNegativeTests.testRegistrationWithEmptyEmailField.executor": "Run",
+    "TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername.executor": "Run",
+    "TestNG.RegistrationPositiveTests (1).executor": "Run",
+    "TestNG.RegistrationPositiveTests.executor": "Run",
+    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1).executor": "Run",
+    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/src/test/java/org/va/base",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\base" />
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\gui" />
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\main\java\org\va\base" />
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\old_code_backup\tests" />
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\old_code_backup\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords">
+    <configuration name="RegistrationNegativeTests.testRegistrationWithExistingUsername" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.registriation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.registriation" />
+      <option name="MAIN_CLASS_NAME" value="org.va.registriation.RegistrationNegativeTests" />
+      <option name="METHOD_NAME" value="testRegistrationWithExistingUsername" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationNegativeTests.testRegistrationWithMismatchedPasswords" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.RegistrationNegativeTests" />
+      <option name="METHOD_NAME" value="testRegistrationWithMismatchedPasswords" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationPositiveTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.registration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.registration" />
+      <option name="MAIN_CLASS_NAME" value="org.va.registration.RegistrationPositiveTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationPositiveTests.testValidRegistrationWithUniqueData (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.RegistrationPositiveTests" />
+      <option name="METHOD_NAME" value="testValidRegistrationWithUniqueData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationPositiveTests.testValidRegistrationWithUniqueData" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.registration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.registration" />
+      <option name="MAIN_CLASS_NAME" value="org.va.registration.RegistrationPositiveTests" />
+      <option name="METHOD_NAME" value="testValidRegistrationWithUniqueData" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords" />
+        <item itemvalue="TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1)" />
+        <item itemvalue="TestNG.RegistrationPositiveTests (1)" />
+        <item itemvalue="TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData" />
+        <item itemvalue="TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="" />
+      <created>1750955999135</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1750955999135</updated>
+    </task>
+    <task id="LOCAL-00001" summary="adding gitignore">
+      <option name="closed" value="true" />
+      <created>1750957315760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750957315760</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding gitignore">
+      <option name="closed" value="true" />
+      <created>1750957394825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750957394825</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adding gitignore">
+      <option name="closed" value="true" />
+      <created>1750957949541</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750957949541</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add .gitignore file to clean up tracked files">
+      <option name="closed" value="true" />
+      <created>1751021864927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751021864927</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ignore workspace.xml and remove it from version control">
+      <option name="closed" value="true" />
+      <created>1751022400661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751022400661</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update README.md with project introduction section">
+      <option name="closed" value="true" />
+      <created>1751028664423</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751028664423</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="adding gitignore" />
+    <MESSAGE value="Add .gitignore file to clean up tracked files" />
+    <MESSAGE value="Ignore workspace.xml and remove it from version control" />
+    <MESSAGE value="Update README.md with project introduction section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md with project introduction section" />
+  </component>
+</project>
