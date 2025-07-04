@@ -6,7 +6,7 @@ import org.va.POM.*;
 import org.va.base.BaseTest;
 
 
-public class PostActionsAfterUploadTests extends BaseTest {
+public class NewPostCreateNegativeTests extends BaseTest {
 
 
     @Test(priority = 1)

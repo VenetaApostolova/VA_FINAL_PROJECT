@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.Keys;
+import java.util.List;
 
 public class HomePage extends BasePage {
     public static final String HOME_PAGE_SUFFIX = "/posts/all";
@@ -36,6 +38,17 @@ public class HomePage extends BasePage {
     @FindBy(className = "profile-pic")
     private WebElement avatarImage;
 
+    @FindBy(id = "homeIcon")
+    private WebElement logo;
+
+    private By searchInputField = By.cssSelector("input[placeholder='Search']");
+    private By searchResultItems = By.cssSelector(".user-preview-container"); // или .user-card, ако така се казва div-ът
+
+    public void clickOnLogo() {
+        wait.until(ExpectedConditions.elementToBeClickable(logo));
+        logo.click();
+    }
+
     public HomePage(WebDriver driver, Logger log) {
         super(driver, log);
         PageFactory.initElements(driver, this);
@@ -60,6 +73,28 @@ public class HomePage extends BasePage {
 
     public void clickOnNewPostNavBar() {
         clickOn(navBarNewPostLink);
+    }
+
+    public void enterSearchQuery(String query) {
+        wait.until(ExpectedConditions.visibilityOf(searchBarInput));
+        searchBarInput.clear();
+        searchBarInput.sendKeys(query);
+        searchBarInput.sendKeys(Keys.ENTER);  // или click, ако има search бутон
+    }
+
+    public boolean areSearchResultsDisplayed() {
+        try {
+            List<WebElement> results = driver.findElements(By.className("post-user-name")); // адаптирай при нужда
+            return !results.isEmpty();
+        } catch (Exception e) {
+            log.error("Search results not found.");
+            return false;
+        }
+        public boolean areSearchResultsDisplayed() {
+            waitForVisibility(searchResultItems);
+            return !driver.findElements(searchResultItems).isEmpty();
+        }
+
     }
 
     public void clickOnLoginNavBar() {

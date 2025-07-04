@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +29,7 @@ public class BaseTest {
     protected static final String PASSWORD = "Veneta123!";
 
     protected WebDriver driver;
+    protected WebDriverWait wait;
     protected Logger log;
 
     @BeforeSuite
@@ -48,6 +50,7 @@ public class BaseTest {
 
         BrowserDriverFactory factory = new BrowserDriverFactory(browser, log);
         driver = factory.createDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));

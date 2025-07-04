@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Add login positive/negative tests and registration negative tests; update LoginPage POM">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginFormNegativeTests.java" afterDir="false" />
+    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Improved LoginFormNegativeTests with better assertions and structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginNegativeTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginPageLayoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginPageLayoutTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginPositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/LoginFormPositiveTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/LoginNegativeTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/LoginPageLayoutTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/LoginPageLayoutTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/LoginPositiveTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/screenshots/confirmLoginPageLogoIsVisible.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/final-project-taf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-taf.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/PostPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/PostActionsAfterUploadTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateNegativeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/PostCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostActionsAfterUploadTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostCreateTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +69,15 @@
     "RunOnceActivity.git.unshallow": "true",
     "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/testng.xml.executor": "Run",
     "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_TAF_S4_THG10/testng.xml.executor": "Run",
+    "TestNG.HomePageNavigationTests.executor": "Run",
+    "TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage.executor": "Run",
+    "TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage.executor": "Run",
+    "TestNG.HomePageNavigationTests.testClickOnNewPostNavBarRedirectsToNewPostPage.executor": "Run",
+    "TestNG.HomePageNavigationTests.testClickOnProfileNavBarRedirectsToProfilePage.executor": "Run",
+    "TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly.executor": "Run",
+    "TestNG.HomePageNegativeTests.executor": "Run",
+    "TestNG.HomePageSearchFunctionalityTests.executor": "Run",
+    "TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery.executor": "Run",
     "TestNG.LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword.executor": "Run",
     "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials.executor": "Run",
     "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField.executor": "Run",
@@ -128,8 +142,8 @@
       <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginFormNegativeTests">
-    <configuration name="LoginFormNegativeTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage">
+    <configuration name="HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -138,7 +152,61 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginFormNegativeTests" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
+      <option name="METHOD_NAME" value="testClickOnHomeNavBarRedirectsToHomePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
+      <option name="METHOD_NAME" value="testClickOnLogoutRedirectsToLoginPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageNavigationTests.testSearchFunctionalityWorksCorrectly" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
+      <option name="METHOD_NAME" value="testSearchFunctionalityWorksCorrectly" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomePageSearchFunctionalityTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageSearchFunctionalityTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -146,7 +214,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -155,62 +223,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginFormNegativeTests" />
-      <option name="METHOD_NAME" value="UnsuccessfulLoginFiveTimesWithWrongPassword" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageSearchFunctionalityTests" />
+      <option name="METHOD_NAME" value="testSearchReturnsResultsForValidQuery" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginFormNegativeTests" />
-      <option name="METHOD_NAME" value="UnsuccessfulLoginWithEmptyCredentials" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginFormNegativeTests" />
-      <option name="METHOD_NAME" value="UnsuccessfulLoginWithEmptyPasswordField" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginNegativeTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.LoginNegativeTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -219,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginFormNegativeTests" />
-        <item itemvalue="TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField" />
-        <item itemvalue="TestNG.LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword" />
-        <item itemvalue="TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials" />
-        <item itemvalue="TestNG.LoginNegativeTests" />
+        <item itemvalue="TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage" />
+        <item itemvalue="TestNG.HomePageSearchFunctionalityTests" />
+        <item itemvalue="TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery" />
+        <item itemvalue="TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly" />
+        <item itemvalue="TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage" />
       </list>
     </recent_temporary>
   </component>
@@ -316,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751576026431</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Improved LoginFormNegativeTests with better assertions and structure">
+      <option name="closed" value="true" />
+      <created>1751581318231</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751581318232</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +363,7 @@
     <MESSAGE value="VA_FINAL_PROJECT base setup" />
     <MESSAGE value="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility" />
     <MESSAGE value="Add login positive/negative tests and registration negative tests; update LoginPage POM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add login positive/negative tests and registration negative tests; update LoginPage POM" />
+    <MESSAGE value="Improved LoginFormNegativeTests with better assertions and structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved LoginFormNegativeTests with better assertions and structure" />
   </component>
 </project>

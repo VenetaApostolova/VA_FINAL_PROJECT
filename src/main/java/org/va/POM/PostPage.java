@@ -140,4 +140,18 @@ public class PostPage extends BasePage {
         }
         return false;
     }
+    public boolean isImagePreviewVisible() {
+        log.info("@ ASSERT: Checking if image preview is visible.");
+        try {
+            WebElement preview = driver.findElement(By.cssSelector("img[alt='Image preview']"));
+            return preview.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean isCreatePostButtonEnabled() {
+        log.info("@ ASSERT: Checking if 'Create Post' button is enabled.");
+        return createPostButton.isEnabled();
+    }
 }

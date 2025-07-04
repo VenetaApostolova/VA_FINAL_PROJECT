@@ -1,6 +1,7 @@
 package org.va.POM;
 
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -43,8 +44,11 @@ public abstract class BasePage {
         elm.sendKeys(txt);
         log.info("# CONFIRM: The user has provided in " + elm + " the text: " + txt);
     }
+    public void waitForVisibility(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
 
-    // Support methods for interacting with text and attributes
     public String getElementText(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
         String elementText = element.getText();
