@@ -42,7 +42,7 @@ public class HomePage extends BasePage {
     private WebElement logo;
 
     private By searchInputField = By.cssSelector("input[placeholder='Search']");
-    private By searchResultItems = By.cssSelector(".user-preview-container"); // или .user-card, ако така се казва div-ът
+    private By searchResultItems = By.cssSelector("app-small-user-profile");
 
     public void clickOnLogo() {
         wait.until(ExpectedConditions.elementToBeClickable(logo));
@@ -90,11 +90,6 @@ public class HomePage extends BasePage {
             log.error("Search results not found.");
             return false;
         }
-        public boolean areSearchResultsDisplayed() {
-            waitForVisibility(searchResultItems);
-            return !driver.findElements(searchResultItems).isEmpty();
-        }
-
     }
 
     public void clickOnLoginNavBar() {
@@ -140,4 +135,9 @@ public class HomePage extends BasePage {
             throw e;
         }
     }
-}
+    public boolean areUserSearchResultsDisplayed() {
+            waitForVisibility(searchResultItems);
+            return !driver.findElements(searchResultItems).isEmpty();
+        }
+    }
+

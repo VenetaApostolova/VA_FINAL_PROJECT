@@ -4,23 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Improved LoginFormNegativeTests with better assertions and structure">
+    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Added positive HomePage search tests and updated page methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final-project-taf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/final-project-taf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/PostPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/PostActionsAfterUploadTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateNegativeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/PostCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostActionsAfterUploadTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostCreateTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageSearchFunctionalityTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageSearchFunctionalityTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/screenshots/testClickOnHomeNavBarRedirectsToHomePage.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/base/BaseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/base/BrowserDriverFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/HomePageElementsVisibilityTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/HomePageNavigationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/HomePageNegativeTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/LoginFormNegativeTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/LoginFormPositiveTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/LoginPageLayoutTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/NewPostCreateNegativeTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/NewPostCreateTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/PostRandomImageTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/ProfileTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/RegistrationNegativeTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/gui/RegistrationPositiveTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageSearchFunctionalityTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageSearchFunctionalityTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,73 +67,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/testng.xml.executor": "Run",
-    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_TAF_S4_THG10/testng.xml.executor": "Run",
-    "TestNG.HomePageNavigationTests.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnNewPostNavBarRedirectsToNewPostPage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnProfileNavBarRedirectsToProfilePage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly.executor": "Run",
-    "TestNG.HomePageNegativeTests.executor": "Run",
-    "TestNG.HomePageSearchFunctionalityTests.executor": "Run",
-    "TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField.executor": "Run",
-    "TestNG.LoginFormNegativeTests.executor": "Run",
-    "TestNG.LoginHappyPathTests.executor": "Run",
-    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials (1).executor": "Run",
-    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials.executor": "Run",
-    "TestNG.LoginLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly.executor": "Run",
-    "TestNG.LoginLayoutTests.executor": "Run",
-    "TestNG.LoginNegativeTests.executor": "Run",
-    "TestNG.LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed.executor": "Run",
-    "TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible.executor": "Run",
-    "TestNG.LoginPositiveTests.executor": "Run",
-    "TestNG.LoginPositiveTests.loginSuccessfullyWithRememberMeOption.executor": "Run",
-    "TestNG.LoginPositiveTests.userIsRedirectedToHomeAfterLogin.executor": "Run",
-    "TestNG.PostActionsAfterUploadTests.executor": "Run",
-    "TestNG.PostActionsAfterUploadTests.testUserCanDeleteLastCreatedPost.executor": "Run",
-    "TestNG.PostCreateTests.ensureUserCanCreatePost.executor": "Run",
-    "TestNG.PostCreateTests.executor": "Run",
-    "TestNG.PostCreateTests.testUserCanLikeLastCreatedPost.executor": "Run",
-    "TestNG.PostRandomImageTests.executor": "Run",
-    "TestNG.PostRandomImageTests.testUserCanCreatePostWithRandomImage.executor": "Run",
-    "TestNG.PostRandomImageTests.testUserCanSeeRandomImagePostInAllPostsPage.executor": "Run",
-    "TestNG.PostTests.confirmUserCanLikeOtherUsersPost.executor": "Run",
-    "TestNG.PostTests.confirmUserCanLikeOwnPost.executor": "Debug",
-    "TestNG.PostTests.ensureUserCanCreatePost.executor": "Run",
-    "TestNG.PostTests.executor": "Run",
-    "TestNG.PostTests.testUserCanCreatePostWithRandomImage.executor": "Run",
-    "TestNG.PostTests.testUserCanLikeOtherUsersPost.executor": "Run",
-    "TestNG.PostTests.testUserCanLikeTheirOwnPost.executor": "Run",
-    "TestNG.PostTests.verifyUserCanCreatePost.executor": "Run",
-    "TestNG.PostTests.verifyUserCanLikePost.executor": "Debug",
-    "TestNG.ProfileTests.executor": "Run",
-    "TestNG.RegistrationHappyPathsTests.verifyUserCanRegisterWithValidData.executor": "Run",
-    "TestNG.RegistrationNegativeTests.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithEmptyEmailField.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords.executor": "Run",
-    "TestNG.RegistrationPositiveTests (1).executor": "Run",
-    "TestNG.RegistrationPositiveTests.executor": "Run",
-    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1).executor": "Run",
-    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/src/test/java/org/va/base",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_TAF_S4_THG10/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.testClickOnNewPostNavBarRedirectsToNewPostPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.testClickOnProfileNavBarRedirectsToProfilePage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageNegativeTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageSearchFunctionalityTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginFormNegativeTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginHappyPathTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginLayoutTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginNegativeTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPositiveTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPositiveTests.loginSuccessfullyWithRememberMeOption.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LoginPositiveTests.userIsRedirectedToHomeAfterLogin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostActionsAfterUploadTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostActionsAfterUploadTests.testUserCanDeleteLastCreatedPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostCreateTests.ensureUserCanCreatePost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostCreateTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostCreateTests.testUserCanLikeLastCreatedPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostRandomImageTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostRandomImageTests.testUserCanCreatePostWithRandomImage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostRandomImageTests.testUserCanSeeRandomImagePostInAllPostsPage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.confirmUserCanLikeOtherUsersPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.confirmUserCanLikeOwnPost.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.PostTests.ensureUserCanCreatePost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.testUserCanCreatePostWithRandomImage.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.testUserCanLikeOtherUsersPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.testUserCanLikeTheirOwnPost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.verifyUserCanCreatePost.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PostTests.verifyUserCanLikePost.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.ProfileTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationHappyPathsTests.verifyUserCanRegisterWithValidData.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationNegativeTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationNegativeTests.testRegistrationWithEmptyEmailField.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationPositiveTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationPositiveTests.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/src/test/java/org/va/base&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\base" />
@@ -142,7 +147,24 @@
       <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage">
+  <component name="RunManager" selected="TestNG.HomePageNavigationTests">
+    <configuration name="HomePageNavigationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
@@ -154,42 +176,6 @@
       <option name="PACKAGE_NAME" value="org.va.gui" />
       <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
       <option name="METHOD_NAME" value="testClickOnHomeNavBarRedirectsToHomePage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
-      <option name="METHOD_NAME" value="testClickOnLogoutRedirectsToLoginPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageNavigationTests.testSearchFunctionalityWorksCorrectly" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="final-project-taf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.va.gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageNavigationTests" />
-      <option name="METHOD_NAME" value="testSearchFunctionalityWorksCorrectly" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -232,13 +218,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project-taf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.va.gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.va.gui" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.HomePageSearchFunctionalityTests" />
+      <option name="METHOD_NAME" value="testSearchReturnsResultsForValidUser" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage" />
+        <item itemvalue="TestNG.HomePageNavigationTests" />
         <item itemvalue="TestNG.HomePageSearchFunctionalityTests" />
+        <item itemvalue="TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidUser" />
+        <item itemvalue="TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage" />
         <item itemvalue="TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery" />
-        <item itemvalue="TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly" />
-        <item itemvalue="TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +343,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751581318232</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added positive HomePage search tests and updated page methods">
+      <option name="closed" value="true" />
+      <created>1751620874502</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751620874502</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added positive HomePage search tests and updated page methods">
+      <option name="closed" value="true" />
+      <created>1751620910871</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751620910871</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +384,7 @@
     <MESSAGE value="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility" />
     <MESSAGE value="Add login positive/negative tests and registration negative tests; update LoginPage POM" />
     <MESSAGE value="Improved LoginFormNegativeTests with better assertions and structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved LoginFormNegativeTests with better assertions and structure" />
+    <MESSAGE value="Added positive HomePage search tests and updated page methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added positive HomePage search tests and updated page methods" />
   </component>
 </project>

@@ -11,20 +11,22 @@ import org.va.base.BaseTest;
 
         @Test(priority = 1)
         public void testSearchReturnsResultsForValidUser() {
+            log.info("==== TEST CASE NAME: testSearchReturnsResultsForValidUser ====");
+
             log.info("STEP 1: Navigate to Home Page and login.");
             HomePage homePage = new HomePage(driver, log);
             homePage.openHomePage();
 
             LoginPage loginPage = new LoginPage(driver, log);
-            loginPage.login(USERNAME, PASSWORD);
+            loginPage.login("venetaQA2025", "Veneta123!");
 
             log.info("STEP 2: Enter valid search query.");
-            String searchTerm = "TestUserUser";
-            homePage.enterSearchQuery(searchTerm);
+            String validUser = "TestUserUser";  // или "1313", или друг от видимите потребители
+            homePage.enterSearchQuery(validUser);
 
             log.info("ASSERT: Search results should be visible.");
-            Assert.assertTrue(homePage.areSearchResultsDisplayed(),
-                    "Expected search results to be displayed for valid query: " + searchTerm);
+            Assert.assertTrue(homePage.areUserSearchResultsDisplayed(),
+                    "Expected search results to be displayed for valid user: " + validUser);
         }
 
         @Test(priority = 2)
