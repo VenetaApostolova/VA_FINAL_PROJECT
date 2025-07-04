@@ -5,79 +5,82 @@ import org.testng.annotations.Test;
 import org.va.POM.*;
 import org.va.base.BaseTest;
 
+import java.io.File;
 
 public class NewPostCreateNegativeTests extends BaseTest {
 
-
     @Test(priority = 1)
-    public void testUserCanLikeLastCreatedPost() {
-        log.info("STEP 1: Logging in and navigating to profile.");
+    public void unsuccessfulPostCreationWithoutImage() {
+        log.info("STEP 1: Navigate to Home page.");
         HomePage homePage = new HomePage(driver, log);
-        LoginPage loginPage = new LoginPage(driver, log);
-        ProfilePage profilePage = new ProfilePage(driver, log);
-        PostPage postPage = new PostPage(driver, log);
-
         homePage.openHomePage();
-        loginPage.loginWithTestUser();
-        homePage.clickOnProfileNavBar();
 
-        log.info("STEP 2: Clicking on the last created post.");
-        profilePage.clickOnLastPost();
+        log.info("STEP 2: Login with valid credentials.");
+        LoginPage loginPage = new LoginPage(driver, log);
+        loginPage.login("venetaQA2025", "Veneta123!");
 
-        log.info("STEP 3: Liking the post.");
-        postPage.clickLikeButton();
+        log.info("STEP 3: Navigate to New Post Page.");
+        homePage.clickOnNewPostNavBar();
 
-        log.info("STEP 4: Verifying the post is liked.");
-        boolean isLiked = postPage.isLikeButtonActive();
-        Assert.assertTrue(isLiked, "Post was not liked successfully.");
+        log.info("STEP 4: Provide only caption.");
+        NewPostPage postPage = new NewPostPage(driver, log);
+        postPage.providePostCaption("Caption without image");
+
+        log.info("STEP 5: Click on 'Create Post' button.");
+        postPage.clickCreatePostButton();
+
+        log.info("STEP 6: Assert error message is 'Please upload an image!'");
+        Assert.assertTrue(postPage.isPostErrorMessageVisible(), "Error message not visible.");
+        Assert.assertEquals(postPage.getPostCreationErrorMessage(), "Please upload an image!");
     }
+
     @Test(priority = 2)
-    public void testUserCanDislikeLastCreatedPost() {
-        log.info("STEP 1: Logging in and navigating to profile.");
+    public void unsuccessfulPostCreationWithoutCaption() {
+        log.info("STEP 1: Navigate to Home page.");
         HomePage homePage = new HomePage(driver, log);
-        LoginPage loginPage = new LoginPage(driver, log);
-        ProfilePage profilePage = new ProfilePage(driver, log);
-        PostPage postPage = new PostPage(driver, log);
-
         homePage.openHomePage();
-        loginPage.loginWithTestUser();
-        homePage.clickOnProfileNavBar();
 
-        log.info("STEP 2: Clicking on the last created post.");
-        profilePage.clickOnLastPost();
+        log.info("STEP 2: Login with valid credentials.");
+        LoginPage loginPage = new LoginPage(driver, log);
+        loginPage.login("venetaQA2025", "Veneta123!");
 
-        log.info("STEP 3: Disliking the post.");
-        postPage.clickDislikeButton();
+        log.info("STEP 3: Navigate to New Post Page.");
+        homePage.clickOnNewPostNavBar();
 
-        log.info("STEP 4: Verifying the post is disliked.");
-        boolean isDisliked = postPage.isDislikeButtonActive();
-        Assert.assertTrue(isDisliked, "Post was not disliked successfully.");
+        log.info("STEP 4: Upload image only.");
+        NewPostPage postPage = new NewPostPage(driver, log);
+        File imageFile = new File("src/test/resources/upload/testUpload1.jpg");
+        postPage.uploadPicture(imageFile);
+
+        log.info("STEP 5: Click on 'Create Post' button.");
+        postPage.clickCreatePostButton();
+
+        log.info("STEP 6: Assert error message is 'Please enter caption!'");
+        Assert.assertTrue(postPage.isPostErrorMessageVisible(), "Error message not visible.");
+        Assert.assertEquals(postPage.getPostCreationErrorMessage(), "Please enter caption!");
     }
 
     @Test(priority = 3)
-    public void testUserCanDeleteLastCreatedPost() {
-        log.info("STEP 1: Logging in and navigating to profile.");
+    public void unsuccessfulPostCreationWithoutImageAndCaption() {
+        log.info("STEP 1: Navigate to Home page.");
         HomePage homePage = new HomePage(driver, log);
-        LoginPage loginPage = new LoginPage(driver, log);
-        ProfilePage profilePage = new ProfilePage(driver, log);
-        PostPage postPage = new PostPage(driver, log);
-
         homePage.openHomePage();
-        loginPage.loginWithTestUser();
-        homePage.clickOnProfileNavBar();
 
-        log.info("STEP 2: Clicking on the last created post.");
-        profilePage.clickOnLastPost();
+        log.info("STEP 2: Login with valid credentials.");
+        LoginPage loginPage = new LoginPage(driver, log);
+        loginPage.login("venetaQA2025", "Veneta123!");
 
-        log.info("STEP 3: Deleting the post.");
-        postPage.clickDeleteButton();
-        postPage.clickConfirmDeleteButton();
+        log.info("STEP 3: Navigate to New Post Page.");
+        homePage.clickOnNewPostNavBar();
 
-        log.info("STEP 4: Verifying deletion message appears.");
-        boolean isDeleted = profilePage.isDeletedMessageVisible();
-        Assert.assertTrue(isDeleted, "Post was not deleted successfully.");
+        log.info("STEP 4: Do not upload anything.");
+        NewPostPage postPage = new NewPostPage(driver, log);
+
+        log.info("STEP 5: Click on 'Create Post' button.");
+        postPage.clickCreatePostButton();
+
+        log.info("STEP 6: Assert error message is 'Please upload an image!'");
+        Assert.assertTrue(postPage.isPostErrorMessageVisible(), "Error message not visible.");
+        Assert.assertEquals(postPage.getPostCreationErrorMessage(), "Please upload an image!");
     }
-
 }
-
-

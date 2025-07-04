@@ -16,7 +16,7 @@ public class PostRandomImageTests extends BaseTest {
         log.info("STEP 1: Navigating to the Home page.");
         HomePage homePage = new HomePage(driver, log);
         LoginPage loginPage = new LoginPage(driver, log);
-        PostPage postPage = new PostPage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
         ProfilePage profilePage = new ProfilePage(driver, log);
         homePage.openHomePage();
 
@@ -56,7 +56,7 @@ public class PostRandomImageTests extends BaseTest {
     public void testUserCanSeeRandomImagePostInAllPostsPage() {
         log.info("STEP 1: Navigating to All Posts page.");
         HomePage homePage = new HomePage(driver, log);
-        PostPage postPage = new PostPage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
         homePage.clickOnAllPostsNavBar();
 
         log.info("STEP 2: Verifying the presence of a post with the test caption.");

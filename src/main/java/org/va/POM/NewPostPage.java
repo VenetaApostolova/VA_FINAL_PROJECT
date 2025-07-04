@@ -6,27 +6,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.TimeoutException;
 import java.io.File;
 import java.time.Duration;
 import java.util.List;
 
-public class PostPage extends BasePage {
+public class NewPostPage extends BasePage {
 
     private WebDriverWait wait;
 
-    public PostPage(WebDriver driver, Logger log) {
+    public NewPostPage(WebDriver driver, Logger log) {
         super(driver, log);
         PageFactory.initElements(driver, this);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    // ========== LOCATORS ==========
-
-    @FindBy(css = ".file[type='file']")
+    @FindBy(css = "input[type='file']")
     private WebElement uploadPictureInput;
 
-    @FindBy(css = "input[class='form-control ng-pristine ng-valid ng-touched']")
+    @FindBy(css = "input[placeholder='Enter you post caption here']")
     private WebElement captionInput;
 
     @FindBy(id = "create-post")
@@ -47,17 +47,21 @@ public class PostPage extends BasePage {
     @FindBy(css = ".post-image")
     private List<WebElement> postImages;
 
-    @FindBy(css = ".post-description")
-    private List<WebElement> postDescriptions;
+    @FindBy(css = ".post-title")
+    private List<WebElement> postTitles;
 
     @FindBy(css = ".like-post")
     private WebElement likeButton;
 
-    // ========== ACTIONS ==========
+    @FindBy(css = ".modal-body .post-title")
+    private WebElement modalCaption;
+
+    public String getModalCaptionText() {
+        return modalCaption.getText().trim();
+    }
 
     public void uploadPicture(File file) {
-        log.info("@ ACTION: Checking visibility of element: LOCATOR STRATEGY: CSS SELECTOR | VALUE: .file[type='file']");
-        wait.until(ExpectedConditions.visibilityOf(uploadPictureInput));
+        log.info("@ ACTION: Uploading file without wait, directly sending path.");
         uploadPictureInput.sendKeys(file.getAbsolutePath());
         log.info("CONFIRMATION # The file was successfully uploaded.");
     }
@@ -96,7 +100,7 @@ public class PostPage extends BasePage {
     }
 
     public String getFirstPostCaption() {
-        return postDescriptions.get(0).getText();
+        return postTitles.get(0).getText();
     }
 
     public void clickLikeButton() {
@@ -109,6 +113,7 @@ public class PostPage extends BasePage {
         log.info("@ ASSERT: Checking if Like button is active.");
         return likeButton.getAttribute("class").contains("text-danger");
     }
+
     public void clickDislikeButton() {
         log.info("@ ACTION: Clicking the Dislike button.");
         wait.until(ExpectedConditions.elementToBeClickable(dislikeIcons.get(0)));
@@ -131,15 +136,39 @@ public class PostPage extends BasePage {
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
+
+    public String getPostCreationErrorMessage() {
+        try {
+            WebElement toastMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("div.toast-message.ng-star-inserted")
+            ));
+            return toastMessage.getText().trim();
+        } catch (TimeoutException e) {
+            log.warn("Toast error message was not found in the expected time.");
+            return "";
+        }
+    }
+
     public boolean isPostWithCaptionVisible(String expectedCaption) {
         log.info("@ ASSERT: Checking if post with caption \"" + expectedCaption + "\" is visible.");
-        for (WebElement caption : postDescriptions) {
-            if (caption.getText().trim().equals(expectedCaption)) {
-                return true;
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        boolean found = false;
+        for (WebElement caption : postTitles) {
+            String actualText = caption.getText().trim();
+            log.info("Found caption: \"" + actualText + "\"");
+            if (actualText.equals(expectedCaption)) {
+                found = true;
             }
         }
-        return false;
+        return found;
     }
+
     public boolean isImagePreviewVisible() {
         log.info("@ ASSERT: Checking if image preview is visible.");
         try {
@@ -154,4 +183,25 @@ public class PostPage extends BasePage {
         log.info("@ ASSERT: Checking if 'Create Post' button is enabled.");
         return createPostButton.isEnabled();
     }
+
+    public boolean isPostSuccessfullyCreated() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class,'post-feed')]//img")
+        )).isDisplayed();
+
+    }
+
+    public boolean isPostErrorMessageVisible() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("div.toast-message.ng-star-inserted")
+            )).isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
 }
+
+
+

@@ -4,48 +4,40 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.va.POM.*;
 import org.va.base.BaseTest;
-
-
 import java.io.File;
 
 public class NewPostCreateTests extends BaseTest {
 
-
     @Test(priority = 1)
-    public void ensureUserCanCreatePost() throws InterruptedException {
-        log.info("STEP 1: Navigating to Home page.");
+    public void confirmUserCanCreatePostWithValidData() {
+        log.info("STEP 1: Navigate to Home Page.");
         HomePage homePage = new HomePage(driver, log);
         homePage.openHomePage();
 
-        log.info("STEP 2: Logging in with test user.");
+        log.info("STEP 2: Log in with valid user.");
         LoginPage loginPage = new LoginPage(driver, log);
         loginPage.login("venetaQA2025", "Veneta123!");
 
-        log.info("STEP 3: Clicking on 'Create Post'.");
+        log.info("STEP 3: Navigate to New Post Page.");
         homePage.clickOnNewPostNavBar();
 
-        log.info("STEP 4: Creating and submitting a new post.");
-        PostPage postPage = new PostPage(driver, log);
+        log.info("STEP 4: Upload image and provide description.");
+        NewPostPage newPostPage = new NewPostPage(driver, log);
+        File image = new File("src/test/resources/upload/testUpload1.jpg");
+        newPostPage.uploadPicture(image);
 
-        File imageFile = new File("src/test/resources/upload/testUpload1.jpg");
-        Assert.assertTrue(imageFile.exists(), "Image file not found: " + imageFile.getAbsolutePath());
+        String caption = "Test Post - created by Automation";
+        newPostPage.providePostCaption(caption);
 
-        postPage.uploadPicture(imageFile);
+        log.info("STEP 5: Click 'Create Post' button.");
+        newPostPage.clickCreatePostButton();
 
-        postPage.providePostCaption("AutoTest Photo 001 - Do not delete");
+        log.info("STEP 6: Navigate back to Home Page.");
+        homePage.openHomePage();
 
-        Thread.sleep(2000);
-
-        postPage.clickCreatePostButton();
-
-        log.info("STEP 5: Navigating to user profile to verify post was created.");
-        homePage.clickOnProfileNavBar();
-
-        ProfilePage profilePage = new ProfilePage(driver, log);
-        int postCount = profilePage.getPostCount();
-
-        log.info("ASSERT: Checking that post count is more than 0.");
-        Assert.assertTrue(postCount > 0, "Post count did not increase – post may not have been created.");
+        log.info("STEP 7: Assert post with caption is visible on Home Page.");
+        Assert.assertTrue(newPostPage.isPostWithCaptionVisible(caption),
+                "The post with caption was not found on the Home page.");
     }
 
     @Test(priority = 2)
@@ -56,13 +48,13 @@ public class NewPostCreateTests extends BaseTest {
 
         log.info("STEP 2: Go to Home Page.");
         HomePage homePage = new HomePage(driver, log);
-        homePage.openHomePage(); // опционално, ако не се пренасочва автоматично след login
+        homePage.openHomePage();
 
         log.info("STEP 3: Navigate to Create Post page.");
         homePage.clickOnNewPostNavBar();
 
         log.info("STEP 4: Upload image.");
-        PostPage postPage = new PostPage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
         File imageFile = new File("src/test/resources/upload/testUpload1.jpg");
 
         Assert.assertTrue(imageFile.exists(), "Image file not found: " + imageFile.getAbsolutePath());

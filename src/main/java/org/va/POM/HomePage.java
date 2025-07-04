@@ -9,6 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.List;
 
 public class HomePage extends BasePage {
@@ -41,12 +44,36 @@ public class HomePage extends BasePage {
     @FindBy(id = "homeIcon")
     private WebElement logo;
 
+    private By userAvatar = By.cssSelector(".post-profile-img img");
+    private By userProfileUsername = By.cssSelector(".profile-user-settings h2");
+
+    public void clickOnUserAvatarFromSearchResults() {
+        waitForVisibility(userAvatar);
+        driver.findElement(userAvatar).click();
+    }
+
+    public boolean isOnUserProfilePage() {
+        waitForVisibility(userProfileUsername);
+        return driver.getCurrentUrl().contains("/users/");
+    }
+
     private By searchInputField = By.cssSelector("input[placeholder='Search']");
     private By searchResultItems = By.cssSelector("app-small-user-profile");
 
     public void clickOnLogo() {
         wait.until(ExpectedConditions.elementToBeClickable(logo));
         logo.click();
+    }
+
+    public boolean isLogoVisible() {
+        waitForVisibility(By.id("homeIcon"));
+        return logo.isDisplayed();
+    }
+
+    public WebElement waitForVisibleUnfollowButton() {
+        By unfollowButtonLocator = By.xpath("//button[normalize-space()='Unfollow']");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(unfollowButtonLocator));
     }
 
     public HomePage(WebDriver driver, Logger log) {
@@ -61,6 +88,11 @@ public class HomePage extends BasePage {
     public void clickOnHomeNavBar() {
         wait.until(ExpectedConditions.visibilityOf(navBarHomeLink));
         navBarHomeLink.click();
+    }
+
+    public List<WebElement> getVisibleUserList() {
+        waitForVisibility(searchResultItems);
+        return driver.findElements(searchResultItems);
     }
 
     public void clickOnLogOutButton() {

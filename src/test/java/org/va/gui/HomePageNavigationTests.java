@@ -87,13 +87,34 @@ public class HomePageNavigationTests extends BaseTest {
             loginPage.login(USERNAME, PASSWORD);
 
             log.info("STEP 2: Perform search.");
-            String searchTerm = "Test";  // валидна стойност, която знаем че връща резултати
+            String searchTerm = "TestUserUser";
             homePage.enterSearchQuery(searchTerm);
 
             log.info("STEP 3: Validate search results appear.");
             Assert.assertTrue(homePage.areSearchResultsDisplayed(),
                     "Expected search results to be displayed for query: " + searchTerm);
         }
+
+    @Test(priority = 6)
+    public void testClickingOnUserAvatarRedirectsToProfile() {
+        log.info("STEP 1: Navigate to Home Page and login.");
+        HomePage homePage = new HomePage(driver, log);
+        homePage.openHomePage();
+
+        LoginPage loginPage = new LoginPage(driver, log);
+        loginPage.login("venetaQA2025", "Veneta123!");
+
+        log.info("STEP 2: Perform search for another user.");
+        homePage.enterSearchQuery("TestUserUser"); // използвай съществуващо име
+        Assert.assertTrue(homePage.areUserSearchResultsDisplayed(), "Search results should be displayed.");
+
+        log.info("STEP 3: Click on user's avatar.");
+        homePage.clickOnUserAvatarFromSearchResults();
+
+        log.info("STEP 4: Validate redirection to user profile.");
+        Assert.assertTrue(homePage.isOnUserProfilePage(), "User should be redirected to profile page.");
     }
+
+}
 
 
