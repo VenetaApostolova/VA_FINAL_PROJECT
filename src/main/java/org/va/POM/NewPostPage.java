@@ -65,6 +65,11 @@ public class NewPostPage extends BasePage {
         uploadPictureInput.sendKeys(file.getAbsolutePath());
         log.info("CONFIRMATION # The file was successfully uploaded.");
     }
+    public void clickOnFirstPost() {
+        log.info("@ ACTION: Clicking on the first post to open it in modal.");
+        WebElement firstPost = wait.until(ExpectedConditions.elementToBeClickable(postImages.get(0)));
+        firstPost.click();
+    }
 
     public void providePostCaption(String captionText) {
         captionInput.sendKeys(captionText);
@@ -135,6 +140,24 @@ public class NewPostPage extends BasePage {
         log.info("@ ACTION: Confirming delete action in popup.");
         Alert alert = driver.switchTo().alert();
         alert.accept();
+    }
+    public void clickDeletePostButton() {
+        WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//i[contains(@class,'fa-trash') or contains(text(),'Delete post')]")));
+        deleteButton.click();
+    }
+
+    public void clickCancelDelete() {
+        WebElement noButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'No')]")));
+        noButton.click();
+    }
+
+    public boolean isPostModalDisplayed() {
+        try {
+            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("post-modal")));
+            return modal.isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 
     public String getPostCreationErrorMessage() {

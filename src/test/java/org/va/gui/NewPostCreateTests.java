@@ -66,7 +66,141 @@ public class NewPostCreateTests extends BaseTest {
         log.info("STEP 6: Confirm 'Create Post' button is enabled.");
         Assert.assertTrue(postPage.isCreatePostButtonEnabled(), "'Create Post' button should be enabled after upload.");
     }
+    @Test(priority = 3)
+    public void testUserCanLikePost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
 
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the first available post.");
+        profilePage.clickPost(0);
+
+        log.info("STEP 3: Clicking like button.");
+        profilePage.clickOnLikeButton();
+
+        log.info("ASSERT: Checking if like message is visible.");
+        Assert.assertTrue(profilePage.isLikeMessageVisible(), "Like confirmation message not visible.");
+    }
+
+    @Test(priority = 4)
+    public void testUserCanDislikePost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
+
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the first available post.");
+        profilePage.clickPost(0);
+
+        log.info("STEP 3: Clicking dislike button.");
+        profilePage.clickOnDislikeButton();
+
+        log.info("ASSERT: Checking if dislike message is visible.");
+        Assert.assertTrue(profilePage.isDislikeMessageVisible(), "Dislike confirmation message not visible.");
+    }
+
+    @Test(priority = 5)
+    public void testUserCanDeletePost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
+
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the last created post.");
+        profilePage.clickOnLastPost();
+
+        log.info("STEP 3: Clicking delete button.");
+        profilePage.clickOnDeleteButton();
+
+        log.info("STEP 4: Confirming deletion.");
+        profilePage.clickOnYesButton();
+
+        log.info("ASSERT: Checking if deletion confirmation message is visible.");
+        Assert.assertTrue(profilePage.isDeletedMessageVisible(), "Post was not deleted successfully.");
+    }
+
+    @Test(priority =6)
+    public void testUserCanLikeLastCreatedPost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
+
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the last created post.");
+        profilePage.clickOnLastPost();
+
+        log.info("STEP 3: Liking the post.");
+        postPage.clickLikeButton();
+
+        log.info("STEP 4: Verifying the post is liked.");
+        boolean isLiked = postPage.isLikeButtonActive();
+        Assert.assertTrue(isLiked, "Post was not liked successfully.");
+    }
+
+    @Test(priority = 7)
+    public void testUserCanDislikeLastCreatedPost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
+
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the last created post.");
+        profilePage.clickOnLastPost();
+
+        log.info("STEP 3: Disliking the post.");
+        postPage.clickDislikeButton();
+
+        log.info("STEP 4: Verifying the post is disliked.");
+        boolean isDisliked = postPage.isDislikeButtonActive();
+        Assert.assertTrue(isDisliked, "Post was not disliked successfully.");
+    }
+
+    @Test(priority =8)
+    public void testUserCanDeleteLastCreatedPost() {
+        log.info("STEP 1: Logging in and navigating to profile.");
+        HomePage homePage = new HomePage(driver, log);
+        LoginPage loginPage = new LoginPage(driver, log);
+        ProfilePage profilePage = new ProfilePage(driver, log);
+        NewPostPage postPage = new NewPostPage(driver, log);
+
+        homePage.openHomePage();
+        loginPage.loginWithTestUser();
+        homePage.clickOnProfileNavBar();
+
+        log.info("STEP 2: Clicking on the last created post.");
+        profilePage.clickOnLastPost();
+
+        log.info("STEP 3: Deleting the post.");
+        postPage.clickDeleteButton();
+        postPage.clickConfirmDeleteButton();
+
+        log.info("STEP 4: Verifying deletion message appears.");
+        boolean isDeleted = profilePage.isDeletedMessageVisible();
+        Assert.assertTrue(isDeleted, "Post was not deleted successfully.");
+    }
 }
 
 

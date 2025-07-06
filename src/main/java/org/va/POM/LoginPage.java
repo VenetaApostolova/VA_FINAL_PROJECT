@@ -160,6 +160,10 @@ public class LoginPage extends BasePage {
         passwordInput.sendKeys(password);
     }
 
+    public boolean isLoginFormVisible() {
+        return driver.findElement(By.cssSelector("form.login-form")).isDisplayed();
+    }
+
     public boolean isLoginErrorVisible() {
         try {
             WebElement error = wait.until(ExpectedConditions.presenceOfElementLocated(

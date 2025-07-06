@@ -8,114 +8,100 @@ import org.va.base.BaseTest;
 
 public class RegistrationNegativeTests extends BaseTest {
 
-    @Test
-    public void testRegistrationWithMismatchedPasswords() {
-        log.info("STEP 1: Navigating to Home Page.");
+    @Test(priority = 1)
+    public void unsuccessfulRegistrationWhenPasswordsDoNotMatch() {
+        log.info("STEP 1: Navigate to Home Page.");
         HomePage homePage = new HomePage(driver, log);
         homePage.openHomePage();
-
-        log.info("STEP 2: Clicking on Login nav bar.");
         homePage.clickOnLoginNavBar();
 
-        log.info("STEP 3: Clicking on Register link.");
+        log.info("STEP 2: Navigate to Registration Page.");
         LoginPage loginPage = new LoginPage(driver, log);
         loginPage.clickOnRegisterLink();
 
-        log.info("STEP 4: Filling in mismatched passwords.");
-        RegistrationPage regPage = new RegistrationPage(driver, log);
-        String username = regPage.generateDemoUsername();
-        String email = regPage.generateEmail();
+        log.info("STEP 3: Fill in mismatched passwords.");
+        RegistrationPage registrationPage = new RegistrationPage(driver, log);
+        String username = registrationPage.generateDemoUsername();
+        String email = registrationPage.generateEmail();
 
-        regPage.enterUsername(username);
-        regPage.enterEmail(email);
-        regPage.enterBirthDate("22022022");
-        regPage.enterPassword("Test12345");           // Парола
-        regPage.confirmPassword("Test12");            // Различна потвърдена парола
-        regPage.enterPublicInfo("Testing mismatched passwords");
+        registrationPage.fillRegistrationForm(
+                username,
+                email,
+                "22022022",
+                "Password123!",
+                "Password321!",
+                "Testing mismatched passwords"
+        );
 
-        log.info("STEP 5: Submitting registration form.");
-        regPage.submitRegistration();
+        log.info("STEP 4: Submit registration form.");
+        registrationPage.submitRegistration();
 
-        log.info("STEP 6: Checking for error message.");
-        String errorMsg = regPage.getRegistrationErrorText();
-        log.info("Error message displayed: " + errorMsg);
-
-        Assert.assertNotNull(errorMsg, "Expected error message for mismatched passwords, but none was shown.");
-        Assert.assertTrue(errorMsg.toLowerCase().contains("парол"), "Expected error message to mention password mismatch.");
+        log.info("STEP 5: Assert that error message is shown.");
+        String error = registrationPage.getRegistrationErrorText();
+        Assert.assertNotNull(error, "Expected an error message to appear, but none was found.");
+        Assert.assertTrue(error.contains("Passwords do not match!"),
+                "Expected error message about mismatched passwords, but got: " + error);
     }
 
-    @Test
-    public void testRegistrationWithEmptyEmailField() {
-        log.info("STEP 1: Navigating to Home Page.");
+    @Test(priority = 2)
+    public void unsuccessfulRegistrationWithEmptyEmailField() {
+        log.info("STEP 1: Navigate to Home Page.");
         HomePage homePage = new HomePage(driver, log);
         homePage.openHomePage();
-
-        log.info("STEP 2: Clicking on Login nav bar.");
         homePage.clickOnLoginNavBar();
 
-        log.info("STEP 3: Clicking on Register link.");
+        log.info("STEP 2: Navigate to Registration Page.");
         LoginPage loginPage = new LoginPage(driver, log);
         loginPage.clickOnRegisterLink();
 
-        log.info("STEP 4: Filling in data with EMPTY email.");
-        RegistrationPage regPage = new RegistrationPage(driver, log);
-        String username = regPage.generateDemoUsername();
+        log.info("STEP 3: Fill registration form with EMPTY email.");
+        RegistrationPage registrationPage = new RegistrationPage(driver, log);
+        String username = registrationPage.generateDemoUsername();
 
-        regPage.enterUsername(username);
-        regPage.enterEmail("");  // празен имейл
-        regPage.enterBirthDate("22022022");
-        regPage.enterPassword("Password123!");
-        regPage.confirmPassword("Password123!");
-        regPage.enterPublicInfo("Testing empty email field");
+        registrationPage.fillRegistrationForm(
+                username,
+                "", // ← празно имейл поле
+                "22022022",
+                "Password123!",
+                "Password123!",
+                "Testing empty email field"
+        );
 
-        log.info("STEP 5: Submitting registration form.");
-        regPage.submitRegistration();
+        log.info("STEP 4: Submit registration form.");
+        registrationPage.submitRegistration();
 
-        log.info("STEP 6: Checking for error message.");
-        String errorMsg = regPage.getRegistrationErrorText();
-        log.info("Error message displayed: " + errorMsg);
-
-        Assert.assertNotNull(errorMsg, "Expected error message for empty email, but none was shown.");
-        Assert.assertTrue(errorMsg.toLowerCase().contains("email") || errorMsg.toLowerCase().contains("имейл"),
-                "Expected error message to mention email problem.");
+        log.info("STEP 5: Assert that email error is visible.");
+        Assert.assertTrue(registrationPage.isEmailErrorVisible(),
+                "Expected 'This field is required' error for empty email field, but it was not visible.");
     }
 
-    @Test
-    public void testRegistrationWithExistingUsername() {
-        log.info("STEP 1: Navigating to Home Page.");
+    @Test(priority = 3)
+    public void unsuccessfulRegistrationWithExistingUsername() {
+        log.info("STEP 1: Navigate to Home page.");
         HomePage homePage = new HomePage(driver, log);
         homePage.openHomePage();
 
-        log.info("STEP 2: Clicking on Login nav bar.");
-        homePage.clickOnLoginNavBar();
+        log.info("STEP 2: Navigate to Registration Page.");
+        RegistrationPage registrationPage = new RegistrationPage(driver, log);
+        registrationPage.openRegistrationPage();
 
-        log.info("STEP 3: Clicking on Register link.");
-        LoginPage loginPage = new LoginPage(driver, log);
-        loginPage.clickOnRegisterLink();
+        log.info("STEP 3: Fill registration form with EXISTING username and unique email.");
+        String existingUsername = "testingDemos";
+        String uniqueEmail = registrationPage.generateEmail();
 
-        log.info("STEP 4: Filling in registration form with EXISTING username.");
-        RegistrationPage regPage = new RegistrationPage(driver, log);
+        registrationPage.fillRegistrationForm(
+                existingUsername,
+                uniqueEmail,
+                "22022003",
+                "Password123!",
+                "Password123!",
+                "Testing existing username"
+        );
 
-        String existingUsername = "testingDemos"; // съществуващ потребител
-        String email = regPage.generateEmail();
+        log.info("STEP 4: Submit registration form.");
+        registrationPage.submitRegistration();
 
-        regPage.enterUsername(existingUsername);
-        regPage.enterEmail(email);
-        regPage.enterBirthDate("22022022");
-        regPage.enterPassword("Password123!");
-        regPage.confirmPassword("Password123!");
-        regPage.enterPublicInfo("Attempt to register with existing username");
-
-        log.info("STEP 5: Submitting registration form.");
-        regPage.submitRegistration();
-
-        log.info("STEP 6: Checking for error message.");
-        String errorMsg = regPage.getRegistrationErrorText();
-        log.info("Error message displayed: " + errorMsg);
-
-        Assert.assertNotNull(errorMsg, "Expected error message for existing username, but none was shown.");
-        Assert.assertTrue(errorMsg.toLowerCase().contains("username") || errorMsg.toLowerCase().contains("потребител"),
-                "Expected error message to mention existing username.");
+        log.info("STEP 5: Assert that toast error message 'Registration failed!' is visible.");
+        Assert.assertTrue(registrationPage.isToastErrorVisible(), "Toast error 'Registration failed!' was not visible.");
     }
-
 }

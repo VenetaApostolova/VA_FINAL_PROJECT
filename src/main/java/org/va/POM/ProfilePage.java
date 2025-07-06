@@ -42,6 +42,34 @@ public class ProfilePage extends BasePage {
     @FindBy(tagName = "app-post")
     private List<WebElement> postsList;
 
+    @FindBy(xpath = "//label[contains(text(), 'All')]")
+    private WebElement filterAllButton;
+
+    @FindBy(xpath = "//label[contains(text(), 'Public')]")
+    private WebElement filterPublicButton;
+
+    @FindBy(xpath = "//label[contains(text(), 'Private')]")
+    private WebElement filterPrivateButton;
+
+
+    public boolean areFilterButtonsVisible() {
+        return filterAllButton.isDisplayed()
+                && filterPublicButton.isDisplayed()
+                && filterPrivateButton.isDisplayed();
+    }
+
+    public void clickAllButton() {
+        clickOn(filterAllButton);
+    }
+
+    public void clickPublicButton() {
+        clickOn(filterPublicButton);
+    }
+
+    public void clickPrivateButton() {
+        clickOn(filterPrivateButton);
+    }
+
     private final Actions action;
 
     public ProfilePage(WebDriver driver, Logger log) {
@@ -61,13 +89,54 @@ public class ProfilePage extends BasePage {
     }
 
     public int getPostCount() {
-        List<WebElement> posts = driver.findElements(By.xpath("//app-profile-post//img"));
+        By postImage = By.cssSelector(".post-img img");
+        wait.until(ExpectedConditions.presenceOfElementLocated(postImage));
+        List<WebElement> posts = driver.findElements(postImage);
         return posts.size();
+    }
+
+    public int getDisplayedPostCountFromText() {
+        By postCountText = By.cssSelector(".profile-stats li:nth-child(1)");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(postCountText));
+        String text = driver.findElement(postCountText).getText();  // напр. "10 posts"
+        String numberOnly = text.replaceAll("[^0-9]", "");          // премахваме всичко освен цифри
+        return Integer.parseInt(numberOnly);
+    }
+
+    public void goToProfilePage() {
+        log.info("@ ACTION: Navigating to Profile Page via navbar.");
+        WebElement profileLink = wait.until(ExpectedConditions.elementToBeClickable(By.id("nav-link-profile")));
+        profileLink.click();
+    }
+
+    public void clickCancelDelete() {
+        log.info("@ ACTION: Clicking on 'No' in delete confirmation popup.");
+        WebElement noButton = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//button[contains(text(),'No')]")));
+        noButton.click();
     }
 
     public void clickOnLastPost() {
         log.info("STEP: Clicking on the last created post.");
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".post-feed .post:nth-child(1)"))).click();
+    }
+
+    public void clickOnFirstProfilePost() {
+            log.info("@ ACTION: Clicking on the first post from Profile page.");
+            By postSelector = By.cssSelector(".post-image");
+            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(postSelector, 0));
+            List<WebElement> profilePosts = driver.findElements(postSelector);
+            profilePosts.get(0).click();
+        }
+    public boolean isPostModalDisplayed() {
+        log.info("@ ASSERT: Checking if the post modal is displayed.");
+        try {
+            WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("post-modal")));
+            return modal.isDisplayed();
+        } catch (TimeoutException e) {
+            log.warn("Post modal was not displayed within timeout.");
+            return false;
+        }
     }
 
     public void clickPost(int postIndex) {
@@ -87,64 +156,83 @@ public class ProfilePage extends BasePage {
         });
     }
 
-    public void ClickOnLikeButton() {
-        clickOn(likeButton);
-    }
+            public void clickOnLikeButton() {
+                clickOn(likeButton);
+            }
 
-    public void ClickOnDisikeButton() {
-        clickOn(dislikeButton);
-    }
+            public void clickOnDislikeButton() {
+                clickOn(dislikeButton);
+            }
 
-    public void ClickOnDeleteButton() {
-        clickOn(deletePostButton);
-    }
+            public void clickOnDeleteButton() {
+                clickOn(deletePostButton);
+            }
 
-    public void ClickOnYesButton() {
-        clickOn(areYouSureYesButton);
-    }
+            public void clickOnYesButton() {
+                clickOn(areYouSureYesButton);
+            }
 
-    public boolean isDeletedMessageVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(confirmDeletionMessage)).isDisplayed();
-        } catch (NoSuchElementException e) {
-            log.error("ERROR : The Post Deleted! message is not displayed!");
-            return false;
+            public boolean isDeletedMessageVisible() {
+                try {
+                    return wait.until(ExpectedConditions.visibilityOf(confirmDeletionMessage)).isDisplayed();
+                } catch (NoSuchElementException e) {
+                    log.error("ERROR : The Post Deleted! message is not displayed!");
+                    return false;
+                }
+            }
+
+            public boolean isLikeMessageVisible() {
+                try {
+                    return wait.until(ExpectedConditions.visibilityOf(postLikeMessage)).isDisplayed();
+                } catch (NoSuchElementException e) {
+                    log.error("ERROR : The Post liked message is not displayed!");
+                    return false;
+                }
+            }
+
+            public boolean isDislikeMessageVisible() {
+                try {
+                    return wait.until(ExpectedConditions.visibilityOf(postDislikeMessage)).isDisplayed();
+                } catch (NoSuchElementException e) {
+                    log.error("ERROR : The Post disliked message is not displayed!");
+                    return false;
+                }
+            }
+
+            public boolean isPostLiked(int postIndex) {
+                try {
+                    WebElement post = postsList.get(postIndex);
+                    WebElement likeIcon = post.findElement(By.cssSelector("i.fa-heart"));
+                    wait.until(ExpectedConditions.visibilityOf(likeIcon));
+                    String iconClass = likeIcon.getAttribute("class");
+                    log.info("Like icon class of post[" + postIndex + "]: " + iconClass);
+                    return iconClass.contains("fas");
+                } catch (Exception e) {
+                    log.error("Like icon not found or not visible for post[" + postIndex + "].");
+                    return false;
+                }
+            }
+
+                public void hoverOverProfilePicture() {
+                    log.info("Hovering over profile picture.");
+                    Actions actions = new Actions(driver);
+                    WebElement profilePicture = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".profile-image")));
+                    actions.moveToElement(profilePicture).perform();
+                }
+
+                public boolean isHoverOverlayVisible() {
+                    log.info("Checking if hover overlay is visible.");
+                    By overlay = By.cssSelector(".profile-image:hover .hover-icon");
+                    try {
+                        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(overlay));
+                        return element.isDisplayed();
+                    } catch (TimeoutException e) {
+                        return false;
+                    }
+                }
+
+            public void closePostModal() {
+                // Method reserved for future use if modal closing becomes necessary.
+            }
+
         }
-    }
-
-    public boolean isLikeMessageVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(postLikeMessage)).isDisplayed();
-        } catch (NoSuchElementException e) {
-            log.error("ERROR : The Post liked message is not displayed!");
-            return false;
-        }
-    }
-
-    public boolean isDislikeMessageVisible() {
-        try {
-            return wait.until(ExpectedConditions.visibilityOf(postDislikeMessage)).isDisplayed();
-        } catch (NoSuchElementException e) {
-            log.error("ERROR : The Post disliked message is not displayed!");
-            return false;
-        }
-    }
-
-    public boolean isPostLiked(int postIndex) {
-        try {
-            WebElement post = postsList.get(postIndex);
-            WebElement likeIcon = post.findElement(By.cssSelector("i.fa-heart"));
-            wait.until(ExpectedConditions.visibilityOf(likeIcon));
-            String iconClass = likeIcon.getAttribute("class");
-            log.info("Like icon class of post[" + postIndex + "]: " + iconClass);
-            return iconClass.contains("fas");
-        } catch (Exception e) {
-            log.error("Like icon not found or not visible for post[" + postIndex + "].");
-            return false;
-        }
-    }
-
-    public void closePostModal() {
-        // Method reserved for future use if modal closing becomes necessary.
-    }
-}

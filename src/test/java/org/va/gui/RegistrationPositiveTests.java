@@ -29,8 +29,8 @@ public class RegistrationPositiveTests extends BaseTest {
             regPage.enterEmail(email);
             regPage.enterBirthDate("01012000");
             regPage.enterPassword("TestPass123!");
-            regPage.confirmPassword("TestPass123!");
-            regPage.enterPublicInfo("Auto-generated test profile");
+            regPage.enterConfirmPassword("TestPass123!");
+            regPage.enterAboutField("Auto-generated test profile");
 
             log.info("STEP 4: Submit registration form.");
             regPage.submitRegistration();
@@ -60,8 +60,8 @@ public class RegistrationPositiveTests extends BaseTest {
             regPage.enterEmail(email);
             regPage.enterBirthDate("01011990");
             regPage.enterPassword("SecurePass123!");
-            regPage.confirmPassword("SecurePass123!");
-            regPage.enterPublicInfo(longText);
+            regPage.enterConfirmPassword("SecurePass123!");
+            regPage.enterAboutField(longText);
             regPage.submitRegistration();
 
             Assert.assertFalse(driver.getCurrentUrl().contains("/register"), "User not redirected after registration.");
@@ -88,8 +88,8 @@ public class RegistrationPositiveTests extends BaseTest {
             regPage.enterEmail(email);
             regPage.enterBirthDate("01012000");
             regPage.enterPassword("StrongPass!1");
-            regPage.confirmPassword("StrongPass!1");
-            regPage.enterPublicInfo("Testing long username");
+            regPage.enterConfirmPassword("StrongPass!1");
+            regPage.enterAboutField("Testing long username");
 
             regPage.submitRegistration();
 
@@ -117,8 +117,8 @@ public class RegistrationPositiveTests extends BaseTest {
             regPage.enterEmail(email);
             regPage.enterBirthDate("01012001");
             regPage.enterPassword("MyPass!23");
-            regPage.confirmPassword("MyPass!23");
-            regPage.enterPublicInfo("Minimal username test");
+            regPage.enterConfirmPassword("MyPass!23");
+            regPage.enterAboutField("Minimal username test");
 
             regPage.submitRegistration();
 
@@ -146,8 +146,8 @@ public class RegistrationPositiveTests extends BaseTest {
             regPage.enterEmail(email);
             regPage.enterBirthDate("01112000");
             regPage.enterPassword("EmojiPass123!");
-            regPage.confirmPassword("EmojiPass123!");
-            regPage.enterPublicInfo("Hi! This is a test bio with emojis and symbols #QA @TestNG %!$");
+            regPage.enterConfirmPassword("EmojiPass123!");
+            regPage.enterAboutField("Hi! This is a test bio with emojis and symbols #QA @TestNG %!$");
 
             regPage.submitRegistration();
 

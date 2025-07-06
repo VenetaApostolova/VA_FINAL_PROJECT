@@ -4,18 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="Added positive HomePage tests HomePageSearchFunctionalityTests and HomePageNavigationTests">
+    <list default="true" id="1e16dbb0-a5f6-4145-94e8-5253f0bfca38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileNegativeTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfilePositiveTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VA_TAF_S4_THG10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageElementsVisibilityTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageElementsVisibilityTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageNavigationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/HomePageNavigationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateNegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateNegativeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/RegistrationPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/PostRandomImageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/PostRandomImageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageElementsVisibilityTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageElementsVisibilityTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageNavigationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/HomePageNavigationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationPositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationPositiveTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateNegativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateNegativeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostRandomImageTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostRandomImageTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationPositiveTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationPositiveTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,16 +61,13 @@
     &quot;accountId&quot;: &quot;f58a6920-5636-4fcd-a693-ac61601d4b3a&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/org/va/gui/ProfilePositiveTests.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2z3Nrwzt8RBoWUMf1omYbgLwtV9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2zTOFL6Di7A5RWvlerJnfrh2yoV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,95 +76,41 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/testng.xml.executor": "Run",
-    "TestNG.C:/Users/venco/IdeaProjects/SeleniumDemo/VA_TAF_S4_THG10/testng.xml.executor": "Run",
-    "TestNG.HomePageElementsVisibilityTests.confirmFollowButtonChangesToUnfollowAfterClick.executor": "Run",
-    "TestNG.HomePageElementsVisibilityTests.confirmFollowButtonIsVisibleAndClickable.executor": "Run",
-    "TestNG.HomePageElementsVisibilityTests.confirmHomePageHeaderIsVisible.executor": "Run",
-    "TestNG.HomePageElementsVisibilityTests.confirmUnfollowButtonChangesToFollowAfterClick.executor": "Run",
-    "TestNG.HomePageElementsVisibilityTests.executor": "Run",
-    "TestNG.HomePageNavigationTests.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnHomeNavBarRedirectsToHomePage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnLogoutRedirectsToLoginPage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnNewPostNavBarRedirectsToNewPostPage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickOnProfileNavBarRedirectsToProfilePage.executor": "Run",
-    "TestNG.HomePageNavigationTests.testClickingOnUserAvatarRedirectsToProfile.executor": "Run",
-    "TestNG.HomePageNavigationTests.testSearchFunctionalityWorksCorrectly.executor": "Run",
-    "TestNG.HomePageNegativeTests.executor": "Run",
-    "TestNG.HomePageSearchFunctionalityTests.executor": "Run",
-    "TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidQuery.executor": "Run",
-    "TestNG.HomePageSearchFunctionalityTests.testSearchReturnsResultsForValidUser.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginFiveTimesWithWrongPassword.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyCredentials.executor": "Run",
-    "TestNG.LoginFormNegativeTests.UnsuccessfulLoginWithEmptyPasswordField.executor": "Run",
-    "TestNG.LoginFormNegativeTests.executor": "Run",
-    "TestNG.LoginHappyPathTests.executor": "Run",
-    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials (1).executor": "Run",
-    "TestNG.LoginHappyPathTests.verifyTheUserCannotLoginWithInvalidCredentials.executor": "Run",
-    "TestNG.LoginLayoutTests.confirmLoginPageLayoutIsVisibleCorrectly.executor": "Run",
-    "TestNG.LoginLayoutTests.executor": "Run",
-    "TestNG.LoginNegativeTests.executor": "Run",
-    "TestNG.LoginPageLayoutTests.confirmLoginPageElementsAreDisplayed.executor": "Run",
-    "TestNG.LoginPageLayoutTests.confirmLoginPageLogoIsVisible.executor": "Run",
-    "TestNG.LoginPositiveTests.executor": "Run",
-    "TestNG.LoginPositiveTests.loginSuccessfullyWithRememberMeOption.executor": "Run",
-    "TestNG.LoginPositiveTests.userIsRedirectedToHomeAfterLogin.executor": "Run",
-    "TestNG.NewPostCreateNegativeTests.executor": "Run",
-    "TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutCaption.executor": "Run",
-    "TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImage.executor": "Run",
-    "TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImageAndCaption.executor": "Run",
-    "TestNG.NewPostCreateTests.confirmUserCanCreatePostWithValidData.executor": "Run",
-    "TestNG.PostActionsAfterUploadTests.executor": "Run",
-    "TestNG.PostActionsAfterUploadTests.testUserCanDeleteLastCreatedPost.executor": "Run",
-    "TestNG.PostCreateTests.ensureUserCanCreatePost.executor": "Run",
-    "TestNG.PostCreateTests.executor": "Run",
-    "TestNG.PostCreateTests.testUserCanLikeLastCreatedPost.executor": "Run",
-    "TestNG.PostRandomImageTests.executor": "Run",
-    "TestNG.PostRandomImageTests.testUserCanCreatePostWithRandomImage.executor": "Run",
-    "TestNG.PostRandomImageTests.testUserCanSeeRandomImagePostInAllPostsPage.executor": "Run",
-    "TestNG.PostTests.confirmUserCanLikeOtherUsersPost.executor": "Run",
-    "TestNG.PostTests.confirmUserCanLikeOwnPost.executor": "Debug",
-    "TestNG.PostTests.ensureUserCanCreatePost.executor": "Run",
-    "TestNG.PostTests.executor": "Run",
-    "TestNG.PostTests.testUserCanCreatePostWithRandomImage.executor": "Run",
-    "TestNG.PostTests.testUserCanLikeOtherUsersPost.executor": "Run",
-    "TestNG.PostTests.testUserCanLikeTheirOwnPost.executor": "Run",
-    "TestNG.PostTests.verifyUserCanCreatePost.executor": "Run",
-    "TestNG.PostTests.verifyUserCanLikePost.executor": "Debug",
-    "TestNG.ProfileTests.executor": "Run",
-    "TestNG.RegistrationHappyPathsTests.verifyUserCanRegisterWithValidData.executor": "Run",
-    "TestNG.RegistrationNegativeTests.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithEmptyEmailField.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithExistingUsername.executor": "Run",
-    "TestNG.RegistrationNegativeTests.testRegistrationWithMismatchedPasswords.executor": "Run",
-    "TestNG.RegistrationPositiveTests (1).executor": "Run",
-    "TestNG.RegistrationPositiveTests.executor": "Run",
-    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData (1).executor": "Run",
-    "TestNG.RegistrationPositiveTests.testValidRegistrationWithUniqueData.executor": "Run",
+    "TestNG.NewPostCreateTests.testUserCanDeletePost.executor": "Run",
+    "TestNG.NewPostCreateTests.testUserCanLikePost.executor": "Run",
+    "TestNG.ProfileNegativeTests.confirmPostIsNotDeletedWhenClickingNoOnConfirmation.executor": "Run",
+    "TestNG.ProfileNegativeTests.confirmUnauthenticatedUserCannotAccessProfilePage.executor": "Run",
+    "TestNG.ProfileNegativeTests.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmDisplayedPostCountIsCorrect.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmFilterButtonsAreDisplayedAndClickable.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmNewPostPageLoadsCorrectly.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmPostImagesAreLoadedSuccessfully.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmProfileUsernameIsDisplayedCorrectly.executor": "Run",
+    "TestNG.ProfilePositiveTests.confirmUserCanHoverOverProfilePicture.executor": "Run",
+    "TestNG.ProfilePositiveTests.executor": "Run",
+    "TestNG.ProfileTests.confirmFilterButtonsAreDisplayedAndClickable.executor": "Run",
+    "TestNG.ProfileTests.confirmNewPostPageLoadsCorrectly.executor": "Run",
+    "TestNG.ProfileTests.confirmProfileUsernameIsDisplayedCorrectly.executor": "Run",
+    "TestNG.RegistrationNegativeTests.unsuccessfulRegistrationWhenPasswordsDoNotMatch.executor": "Run",
+    "TestNG.RegistrationNegativeTests.unsuccessfulRegistrationWithEmptyEmailField.executor": "Run",
+    "TestNG.RegistrationNegativeTests.unsuccessfulRegistrationWithExistingUsername.executor": "Run",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/venco/IdeaProjects/SeleniumDemo/VA_FINAL_PROJECT/src/test/java/org/va/base",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints"
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\base" />
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\gui" />
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\main\java\org\va\base" />
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\old_code_backup\tests" />
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\old_code_backup\pages" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\venco\IdeaProjects\SeleniumDemo\VA_FINAL_PROJECT\src\test\java\org\va\tests" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImageAndCaption">
-    <configuration name="NewPostCreateNegativeTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ProfileNegativeTests.confirmPostIsNotDeletedWhenClickingNoOnConfirmation">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="VA_FINAL_PROJECT" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="VA_FINAL_PROJECT" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProfileNegativeTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -159,7 +119,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.NewPostCreateNegativeTests" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.ProfileNegativeTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -167,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutCaption" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileNegativeTests.confirmPostIsNotDeletedWhenClickingNoOnConfirmation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -176,8 +136,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.NewPostCreateNegativeTests" />
-      <option name="METHOD_NAME" value="unsuccessfulPostCreationWithoutCaption" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.ProfileNegativeTests" />
+      <option name="METHOD_NAME" value="confirmPostIsNotDeletedWhenClickingNoOnConfirmation" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -185,7 +145,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileNegativeTests.confirmUnauthenticatedUserCannotAccessProfilePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -194,8 +154,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.NewPostCreateNegativeTests" />
-      <option name="METHOD_NAME" value="unsuccessfulPostCreationWithoutImage" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.ProfileNegativeTests" />
+      <option name="METHOD_NAME" value="confirmUnauthenticatedUserCannotAccessProfilePage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -203,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImageAndCaption" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfilePositiveTests.confirmProfileUsernameIsDisplayedCorrectly" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -212,8 +172,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.NewPostCreateNegativeTests" />
-      <option name="METHOD_NAME" value="unsuccessfulPostCreationWithoutImageAndCaption" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.ProfilePositiveTests" />
+      <option name="METHOD_NAME" value="confirmProfileUsernameIsDisplayedCorrectly" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -221,7 +181,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NewPostCreateTests.confirmUserCanCreatePostWithValidData" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfilePositiveTests.confirmUserCanHoverOverProfilePicture" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="final-project-taf" />
       <extension name="coverage">
         <pattern>
@@ -230,8 +190,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.va.gui" />
-      <option name="MAIN_CLASS_NAME" value="org.va.gui.NewPostCreateTests" />
-      <option name="METHOD_NAME" value="confirmUserCanCreatePostWithValidData" />
+      <option name="MAIN_CLASS_NAME" value="org.va.gui.ProfilePositiveTests" />
+      <option name="METHOD_NAME" value="confirmUserCanHoverOverProfilePicture" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -241,162 +201,34 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImageAndCaption" />
-        <item itemvalue="TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutCaption" />
-        <item itemvalue="TestNG.NewPostCreateNegativeTests.unsuccessfulPostCreationWithoutImage" />
-        <item itemvalue="TestNG.NewPostCreateNegativeTests" />
-        <item itemvalue="TestNG.NewPostCreateTests.confirmUserCanCreatePostWithValidData" />
+        <item itemvalue="TestNG.ProfileNegativeTests.confirmPostIsNotDeletedWhenClickingNoOnConfirmation" />
+        <item itemvalue="TestNG.ProfileNegativeTests.confirmUnauthenticatedUserCannotAccessProfilePage" />
+        <item itemvalue="TestNG.ProfileNegativeTests" />
+        <item itemvalue="TestNG.ProfilePositiveTests.confirmUserCanHoverOverProfilePicture" />
+        <item itemvalue="TestNG.ProfilePositiveTests.confirmProfileUsernameIsDisplayedCorrectly" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01966e0a-2229-4692-9ec3-016067a4d7b1" name="Changes" comment="" />
-      <created>1750955999135</created>
+      <changelist id="1e16dbb0-a5f6-4145-94e8-5253f0bfca38" name="Changes" comment="" />
+      <created>1751751491822</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1750955999135</updated>
+      <updated>1751751491822</updated>
     </task>
-    <task id="LOCAL-00001" summary="adding gitignore">
-      <option name="closed" value="true" />
-      <created>1750957315760</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1750957315760</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adding gitignore">
-      <option name="closed" value="true" />
-      <created>1750957394825</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1750957394825</updated>
-    </task>
-    <task id="LOCAL-00003" summary="adding gitignore">
-      <option name="closed" value="true" />
-      <created>1750957949541</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1750957949541</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add .gitignore file to clean up tracked files">
-      <option name="closed" value="true" />
-      <created>1751021864927</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1751021864927</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Ignore workspace.xml and remove it from version control">
-      <option name="closed" value="true" />
-      <created>1751022400661</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1751022400661</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Update README.md with project introduction section">
-      <option name="closed" value="true" />
-      <created>1751028664423</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1751028664423</updated>
-    </task>
-    <task id="LOCAL-00007" summary="project hotfix">
-      <option name="closed" value="true" />
-      <created>1751446148125</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1751446148125</updated>
-    </task>
-    <task id="LOCAL-00008" summary="VA_FINAL_PROJECT base setup">
-      <option name="closed" value="true" />
-      <created>1751569016165</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1751569016165</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add login positive/negative tests and registration negative tests; update LoginPage POM">
-      <option name="closed" value="true" />
-      <created>1751576013915</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1751576013915</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Add login positive/negative tests and registration negative tests; update LoginPage POM">
-      <option name="closed" value="true" />
-      <created>1751576026431</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1751576026431</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Improved LoginFormNegativeTests with better assertions and structure">
-      <option name="closed" value="true" />
-      <created>1751581318231</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1751581318232</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Added positive HomePage search tests and updated page methods">
-      <option name="closed" value="true" />
-      <created>1751620874502</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1751620874502</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Added positive HomePage search tests and updated page methods">
-      <option name="closed" value="true" />
-      <created>1751620910871</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1751620910871</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added positive HomePage tests HomePageSearchFunctionalityTests and HomePageNavigationTests">
-      <option name="closed" value="true" />
-      <created>1751622374940</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1751622374940</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="adding gitignore" />
-    <MESSAGE value="Add .gitignore file to clean up tracked files" />
-    <MESSAGE value="Ignore workspace.xml and remove it from version control" />
-    <MESSAGE value="Update README.md with project introduction section" />
-    <MESSAGE value="project hotfix" />
-    <MESSAGE value="VA_FINAL_PROJECT base setup" />
-    <MESSAGE value="Add positive login and login layout tests&#10;&#10;- Implemented successful login with valid credentials&#10;- Added tests for login form placeholders, labels and logo visibility" />
-    <MESSAGE value="Add login positive/negative tests and registration negative tests; update LoginPage POM" />
-    <MESSAGE value="Improved LoginFormNegativeTests with better assertions and structure" />
-    <MESSAGE value="Added positive HomePage search tests and updated page methods" />
-    <MESSAGE value="Added positive HomePage tests HomePageSearchFunctionalityTests and HomePageNavigationTests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added positive HomePage tests HomePageSearchFunctionalityTests and HomePageNavigationTests" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

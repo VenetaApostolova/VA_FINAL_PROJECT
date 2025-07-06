@@ -47,6 +47,10 @@ public class HomePage extends BasePage {
     private By userAvatar = By.cssSelector(".post-profile-img img");
     private By userProfileUsername = By.cssSelector(".profile-user-settings h2");
 
+    public void clickProfileNavBar() {
+        clickOn(navBarProfileLink);
+    }
+
     public void clickOnUserAvatarFromSearchResults() {
         waitForVisibility(userAvatar);
         driver.findElement(userAvatar).click();
@@ -99,9 +103,6 @@ public class HomePage extends BasePage {
         clickOn(logOutButton);
     }
 
-    public void clickOnProfileNavBar() {
-        clickOn(navBarProfileLink);
-    }
 
     public void clickOnNewPostNavBar() {
         clickOn(navBarNewPostLink);
@@ -141,6 +142,10 @@ public class HomePage extends BasePage {
 
     public boolean isNavBarProfileLinkShown() {
         return isElementPresented(navBarProfileLink);
+    }
+
+    public void clickOnProfileNavBar() {
+        clickOn(navBarProfileLink);
     }
 
     public boolean isNavBarNewPostLinkShown() {
