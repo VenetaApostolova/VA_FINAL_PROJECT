@@ -84,7 +84,7 @@ Nikolay Nikolov - supervision
 4. **Manual Test Runs**  
 
 5. **Automation Test Runs**  
-   🔗 [Surefire Test Report](https://github.com/VenetaApostolova/VA_FINAL_PROJECT/tree/main/target/surefire-reports)
+   
 
 
 
@@ -104,13 +104,35 @@ To be able to run the project on localhost and run the test automations, the fol
 
 ### __2. Running the automations__
 
-__NB:__ Prior to running the project and automations make sure your chrome driver executables are properly provided in the project
+__NB:__ Prior to running the project and automations make sure your Chrome driver executables are properly provided in the project.
 
 1. Clone the repo on your computer.
-2. Run run_automation.bat.
+   ```bash
+   git clone https://github.com/VenetaApostolova/VA_FINAL_PROJECT.git
+
+2. Open the project in IntelliJ IDEA (Ultimate or Community Edition).
+
+3. Make sure all dependencies are downloaded via Maven
+
+- Right-click on pom.xml → Add as Maven Project,
+
+  - or run the following command in terminal:
+  
+   ```bash
+  mvn clean install
+  ```
+4. Run the test suite using:
+  ```bash
+  mvn clean test
+```
+
 
 ### __2.1. How to run UI tests automation individually__
 
-1. Run run_ui_automation.bat file at the root location of the repo.
-2. Go to terminal and execute mvn -clean test 
- 
+1. Open the terminal (in IntelliJ or system terminal).
+2. Navigate to the root directory of the project (where the `pom.xml` file is located).
+3. Execute the following command:
+
+```bash
+mvn clean test
+```
