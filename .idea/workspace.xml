@@ -4,35 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e16dbb0-a5f6-4145-94e8-5253f0bfca38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileNegativeTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfilePositiveTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VA_TAF_S4_THG10.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="1e16dbb0-a5f6-4145-94e8-5253f0bfca38" name="Changes" comment="Add improved ProfilePositiveTests, ProfileNegativeTests, and RegistrationTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/NewPostPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/va/POM/ProfilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/va/POM/RegistrationPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/NewPostCreateTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/ProfileTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationNegativeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationPositiveTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/va/gui/RegistrationPositiveTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/PostPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/ProfilePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateNegativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateNegativeTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/NewPostCreateTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostRandomImageTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/PostRandomImageTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/ProfileTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationNegativeTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationPositiveTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/va/gui/RegistrationPositiveTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/va/POM/LoginPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +36,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/test/java/org/va/gui/ProfilePositiveTests.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
@@ -218,7 +193,20 @@
       <option name="presentableId" value="Default" />
       <updated>1751751491822</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add improved ProfilePositiveTests, ProfileNegativeTests, and RegistrationTests">
+      <option name="closed" value="true" />
+      <created>1751836177880</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751836177880</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add improved ProfilePositiveTests, ProfileNegativeTests, and RegistrationTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add improved ProfilePositiveTests, ProfileNegativeTests, and RegistrationTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
