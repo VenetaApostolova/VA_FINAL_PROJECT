@@ -49,21 +49,44 @@ __I-skillo__ is a web application that allows you to connect and communicate wit
 ## II. QA TEAM MEMBERS
 
 ### QA Team:
-Skillo Best Student<br/>
+Veneta Apostolova - student
+
 Nikolay Nikolov - supervision
 
 ## III. DELIVERABLES
 1. [Master Test Plan v3.0]( )
 2. Test Cases - [CloudBaseStorage at GoogleDrive]( add link here)
 3. [UI Automation With Selenium And Java]( )
+ - A full suite of automated UI tests using:
+ - Java
+ - Selenium WebDriver
+ - TestNG
+ - Page Object Model
+ - Maven
+
 4. [UI Summary Report]( )
+ - A brief summary of automated test execution results including:
+ - Total test cases run
+ - Passed/Failed count
+ - Test coverage overview
+ - Screenshots/logs for failed tests (if available)
+ - Located in the `target/surefire-reports` directory or generated dynamically via IDE/Maven test execution.
 
 ## IV. USEFUL LINKS
-1. DEV Project
-2. Bug Tracking System
-3. Full QA Documentation
-4. Manual Test Runs
-5. Automation Test Runs
+
+1. **DEV Project**  
+   🔗 [GitHub Repository – VA_FINAL_PROJECT](https://github.com/VenetaApostolova/VA_FINAL_PROJECT)
+
+2. **Bug Tracking System**  
+   
+3. **Full QA Documentation**  
+
+4. **Manual Test Runs**  
+
+5. **Automation Test Runs**  
+   🔗 [Surefire Test Report](https://github.com/VenetaApostolova/VA_FINAL_PROJECT/tree/main/target/surefire-reports)
+
+
 
 ## V. HOW TO RUN AUTOMATIONS
 

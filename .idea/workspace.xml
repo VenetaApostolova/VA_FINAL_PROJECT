@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e16dbb0-a5f6-4145-94e8-5253f0bfca38" name="Changes" comment="git add README.md&#10;git commit -m &quot;Fix image path in README to show logo&quot;&#10;git push origin main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751899078002</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git add README.md&#10;git commit -m &quot;Fix image path in README to show logo&quot;&#10;git push origin main">
+      <option name="closed" value="true" />
+      <created>1751899481433</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751899481433</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
